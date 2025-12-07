@@ -107,7 +107,7 @@
         </executions>
         <configuration>
           <argLine>-Dtest.engine.url=${test.engine.url}
-            -Dtest.engine.app=formeditordemotest</argLine>
+            -Dtest.engine.app=formeditordemostest</argLine>
         </configuration>
       </plugin>
     </plugins>
