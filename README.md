@@ -4,4 +4,4 @@
 
 Demo project for Axon Ivy Form editor
 
-Read our [documentation](formeditor-demo-product/README.md).
+Read our [documentation](formeditor-demos-product/README.md).
