@@ -1,14 +1,4 @@
-<!--
-Dear developer !     
+# Axon Ivy Form Editor Demos
 
-When you create your very valuable documentation, please be aware that this  is not only published on github. With this file we provide a German translation of the description-tab, i.e. https://market.axonivy.com/adobe-acrobat-connector#tab-description. Please contact us if you need support with the German translation.
--->
-
-# Axon Ivy Form Editor Demo Demo
-
-Bitte übersetze mindestens das "Description"-Chapter aus https://github.com/axonivy-market/formeditor-demo/blob/master/formeditor-demos-product/README.md. Es wird auf unserer Homepage angezeigt.
-Falls Du darüber hinaus auch die anderen Chapter übersetzt, werden auch diese auf der Homepage auf Deutsch angezeigt.
-
-<!--
-Die Erläuterungen unter „MEIN-PRODUKT-NAME“ werden z.B. für den  Adobe Konnektor hier angezeigt: https://market.axonivy.com/adobe-acrobat-connector#tab-description wenn ein Nutzer Deutsch als Anzeigesprache ausgewählt hat.
--->
+Der Axon Ivy Form Editor ist ein benutzerfreundliches Design-Tool, mit dem Sie Formulare visuell erstellen können. Anstatt Code zu schreiben, ziehen Sie einfach Elemente per Drag & Drop auf den Bildschirm, um ihn zu gestalten. So geht es schneller und ist für alle leichter zugänglich.
+Dieses Demo-Projekt zeigt, wie Formulare innerhalb eines Prozesses erstellt und verwendet werden können. Es enthält ein einfaches und praktisches Beispiel, damit Benutzer Schritt für Schritt verstehen, wie sie ein Formular entwerfen, es mit Informationen verknüpfen und damit interagieren können – auch ohne tiefgreifende technische Kenntnisse.
