@@ -1,0 +1,159 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/form/12.0.6/form.json",
+  "id" : "0c8f12b0-9d52-437b-952e-50fd9c8ea57d",
+  "components" : [ {
+    "cid" : "panel1",
+    "type" : "Panel",
+    "config" : {
+      "id" : "personal-data",
+      "components" : [ {
+        "cid" : "layout2",
+        "type" : "Layout",
+        "config" : {
+          "components" : [ {
+            "cid" : "input5",
+            "type" : "Input",
+            "config" : {
+              "id" : "first-name",
+              "disabled" : "#{data.isReadOnly}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/FirstName')}",
+              "value" : "#{data.data.firstName}"
+            }
+          }, {
+            "cid" : "input4",
+            "type" : "Input",
+            "config" : {
+              "id" : "last-name",
+              "disabled" : "#{data.isReadOnly}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/LastName')}",
+              "value" : "#{data.data.lastName}"
+            }
+          }, {
+            "cid" : "input6",
+            "type" : "Input",
+            "config" : {
+              "id" : "email",
+              "disabled" : "#{data.isReadOnly}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Email')}",
+              "value" : "#{data.data.email}",
+              "type" : "EMAIL"
+            }
+          }, {
+            "cid" : "datepicker7",
+            "type" : "DatePicker",
+            "config" : {
+              "id" : "date-of-birth",
+              "disabled" : "#{data.isReadOnly}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/DateOfBirth')}",
+              "value" : "#{data.data.dateOfBirth}"
+            }
+          } ]
+        }
+      }, {
+        "cid" : "select8",
+        "type" : "Select",
+        "config" : {
+          "id" : "country",
+          "disabled" : "#{data.isReadOnly}",
+          "updateOnChange" : true,
+          "staticItems" : [ {
+            "label" : "Please select a country",
+            "value" : ""
+          }, {
+            "label" : "Germany",
+            "value" : "Germany"
+          }, {
+            "label" : "Switzerland",
+            "value" : "Switzerland"
+          }, {
+            "label" : "Austria",
+            "value" : "Austria"
+          }, {
+            "label" : "Vietnam",
+            "value" : "Vietnam"
+          } ],
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Country')}",
+          "value" : "#{data.data.country}"
+        }
+      }, {
+        "cid" : "select9",
+        "type" : "Select",
+        "config" : {
+          "id" : "federal-state",
+          "visible" : "#{data.data.country eq 'Germany'}",
+          "disabled" : "#{data.isReadOnly}",
+          "staticItems" : [ {
+            "label" : "Baden-Württemberg",
+            "value" : "Baden"
+          }, {
+            "label" : "Bayern",
+            "value" : "Bayern"
+          }, {
+            "label" : "Berlin",
+            "value" : "Berlin"
+          }, {
+            "label" : "Brandenburg",
+            "value" : "Brandenburg"
+          }, {
+            "label" : "Hamburg",
+            "value" : "Hamburg"
+          }, {
+            "label" : "Hessen",
+            "value" : "Hessen"
+          }, {
+            "label" : "Mecklenburg-Vorpommern",
+            "value" : "Mecklenburg"
+          }, {
+            "label" : "Niedersachsen",
+            "value" : "Niedersachsen"
+          }, {
+            "label" : "Nordrhein-Westfalen",
+            "value" : "Nordrhein"
+          }, {
+            "label" : "Rheinland-Pfalz",
+            "value" : "Rheinland"
+          }, {
+            "label" : "Sachsen-Anhalt",
+            "value" : "Anhalt"
+          }, {
+            "label" : "Saarland Sachsen",
+            "value" : "Saarland"
+          }, {
+            "label" : "Schleswig-Holstein",
+            "value" : "Schleswig"
+          }, {
+            "label" : "Thüringen",
+            "value" : "Thuringen"
+          } ],
+          "dynamicItemsLabel" : "#{item.officialName}",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/FederalState')}",
+          "value" : "#{data.data.federalState}"
+        }
+      }, {
+        "cid" : "layout10",
+        "type" : "Layout",
+        "config" : {
+          "id" : "action-button",
+          "components" : [ {
+            "cid" : "button11",
+            "type" : "Button",
+            "config" : {
+              "id" : "cancel",
+              "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Cancel')}",
+              "action" : "void()"
+            }
+          }, {
+            "cid" : "button12",
+            "type" : "Button",
+            "config" : {
+              "id" : "submit",
+              "name" : "#{data.isReadOnly ? ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Approved') : ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Submit') }",
+              "action" : "#{logic.close}"
+            }
+          } ]
+        }
+      } ],
+      "title" : "Personal Data"
+    }
+  } ]
+}

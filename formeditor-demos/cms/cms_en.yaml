@@ -1,0 +1,15 @@
+Dialogs:
+  com:
+    axonivy:
+      demo:
+        formeditordemos:
+          DynamicUI:
+            Approved: Approved
+            Cancel: Cancel
+            Country: Country
+            DateOfBirth: Date of Birth
+            Email: Email
+            FederalState: Federal State
+            FirstName: First Name
+            LastName: Last Name
+            Submit: Submit
