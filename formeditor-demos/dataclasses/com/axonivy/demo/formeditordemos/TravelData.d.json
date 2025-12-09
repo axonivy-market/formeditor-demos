@@ -1,0 +1,20 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/13.2.0/data-class.json",
+  "simpleName" : "TravelData",
+  "namespace" : "com.axonivy.demo.formeditordemos",
+  "fields" : [ {
+    "name" : "date",
+    "type" : "java.util.Date",
+    "modifiers" : [ ]
+  }, {
+    "name" : "category",
+    "modifiers" : [ ]
+  }, {
+    "name" : "amount",
+    "type" : "Number",
+    "modifiers" : [ ]
+  }, {
+    "name" : "description",
+    "modifiers" : [ ]
+  } ]
+}

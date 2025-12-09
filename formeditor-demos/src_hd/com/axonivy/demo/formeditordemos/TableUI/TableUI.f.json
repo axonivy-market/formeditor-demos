@@ -1,0 +1,196 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
+  "id" : "d0aac62d-74a5-44d6-a776-1904e9b9d65d",
+  "components" : [ {
+    "cid" : "datatable4",
+    "type" : "DataTable",
+    "config" : {
+      "updateOnChange" : true,
+      "components" : [ {
+        "cid" : "datatablecolumn6",
+        "type" : "DataTableColumn",
+        "config" : {
+          "header" : "category",
+          "value" : "#{currentRow.category}"
+        }
+      }, {
+        "cid" : "datatablecolumn5",
+        "type" : "DataTableColumn",
+        "config" : {
+          "header" : "amount",
+          "value" : "#{currentRow.amount}"
+        }
+      }, {
+        "cid" : "datatablecolumn7",
+        "type" : "DataTableColumn",
+        "config" : {
+          "header" : "date",
+          "value" : "#{currentRow.date}"
+        }
+      }, {
+        "cid" : "datatablecolumn8",
+        "type" : "DataTableColumn",
+        "config" : {
+          "header" : "description",
+          "value" : "#{currentRow.description}"
+        }
+      }, {
+        "cid" : "datatablecolumn11",
+        "type" : "DataTableColumn",
+        "config" : {
+          "header" : "Actions",
+          "components" : [ {
+            "cid" : "button22",
+            "type" : "Button",
+            "config" : {
+              "action" : "editRow",
+              "rounded" : true,
+              "type" : "EDIT",
+              "icon" : "pi pi-pencil"
+            }
+          }, {
+            "cid" : "button23",
+            "type" : "Button",
+            "config" : {
+              "action" : "deleteRow",
+              "variant" : "DANGER",
+              "rounded" : true,
+              "type" : "DELETE",
+              "icon" : "pi pi-trash",
+              "confirmDialog" : true,
+              "confirmHeader" : "Delete Confirmation",
+              "confirmMessage" : "Are you sure you want to delete row: #{currentRow.category}?",
+              "confirmOkValue" : "Yes",
+              "confirmCancelValue" : "No"
+            }
+          } ],
+          "asActionColumn" : true
+        }
+      } ],
+      "value" : "#{data.data}",
+      "maxRows" : "10",
+      "isEditable" : true,
+      "editDialogId" : "dialog20",
+      "addButton" : true
+    }
+  }, {
+    "cid" : "layout18",
+    "type" : "Layout",
+    "config" : {
+      "components" : [ {
+        "cid" : "text19",
+        "type" : "Text",
+        "config" : {
+          "id" : "total-amount-id",
+          "content" : "Total amount: #{data.data.size()}"
+        }
+      } ],
+      "gridVariant" : "FREE"
+    }
+  }, {
+    "cid" : "layout1",
+    "type" : "Layout",
+    "config" : {
+      "components" : [ {
+        "cid" : "button2",
+        "type" : "Button",
+        "config" : {
+          "name" : "Cancel",
+          "action" : "#{ivyWorkflowView.cancel()}",
+          "variant" : "SECONDARY",
+          "style" : "FLAT",
+          "processOnlySelf" : true
+        }
+      }, {
+        "cid" : "button3",
+        "type" : "Button",
+        "config" : {
+          "name" : "Proceed",
+          "action" : "#{logic.close}",
+          "type" : "SUBMIT",
+          "icon" : "si si-check-1"
+        }
+      } ],
+      "type" : "FLEX",
+      "justifyContent" : "END"
+    }
+  }, {
+    "cid" : "dialog20",
+    "type" : "Dialog",
+    "config" : {
+      "components" : [ {
+        "cid" : "select24",
+        "type" : "Select",
+        "config" : {
+          "id" : "category-id",
+          "staticItems" : [ {
+            "label" : "Hotel",
+            "value" : "hotel"
+          }, {
+            "label" : "Meal",
+            "value" : "meal"
+          }, {
+            "label" : "Taxi",
+            "value" : "taxi"
+          }, {
+            "label" : "Other",
+            "value" : "other"
+          } ],
+          "label" : "Category",
+          "value" : "#{currentRow.category}"
+        }
+      }, {
+        "cid" : "input25",
+        "type" : "Input",
+        "config" : {
+          "id" : "amount-id",
+          "label" : "Amount",
+          "value" : "#{currentRow.amount}",
+          "type" : "NUMBER",
+          "validationMessage" : "Invalid E-Mail"
+        }
+      }, {
+        "cid" : "datepicker26",
+        "type" : "DatePicker",
+        "config" : {
+          "id" : "date-update-id",
+          "label" : "Date",
+          "value" : "#{currentRow.date}"
+        }
+      }, {
+        "cid" : "textarea27",
+        "type" : "Textarea",
+        "config" : {
+          "id" : "description-id",
+          "label" : "Description",
+          "value" : "#{currentRow.description}",
+          "rows" : "5"
+        }
+      } ],
+      "header" : "Edit Row",
+      "linkedComponent" : "datatable4",
+      "buttons" : [ {
+        "cid" : "button20",
+        "type" : "Button",
+        "config" : {
+          "name" : "Cancel",
+          "action" : "cancelEdit",
+          "variant" : "SECONDARY",
+          "style" : "FLAT",
+          "rounded" : true,
+          "type" : "DIALOGCANCEL"
+        }
+      }, {
+        "cid" : "button21",
+        "type" : "Button",
+        "config" : {
+          "name" : "Save",
+          "action" : "saveEdit",
+          "rounded" : true,
+          "type" : "DIALOGSAVE",
+          "icon" : "si si-check-1"
+        }
+      } ]
+    }
+  } ]
+}

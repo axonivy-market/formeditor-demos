@@ -1,8 +1,8 @@
 {
   "$schema" : "https://json-schema.axonivy.com/process/13.2.0/process.json",
-  "id" : "19AC34C9316CD627",
+  "id" : "19B023CFC8CE9B66",
   "config" : {
-    "data" : "com.axonivy.demo.formeditordemos.SimpleUIData"
+    "data" : "com.axonivy.demo.formeditordemos.TableUIData"
   },
   "elements" : [ {
       "id" : "f0",
@@ -21,17 +21,16 @@
       "id" : "f1",
       "type" : "TaskEnd",
       "visual" : {
-        "at" : { "x" : 352, "y" : 64 }
+        "at" : { "x" : 616, "y" : 64 }
       }
     }, {
       "id" : "f3",
       "type" : "DialogCall",
-      "name" : "Simple UI Demo",
       "config" : {
-        "dialog" : "com.axonivy.demo.formeditordemos.DynamicUI:start(com.axonivy.demo.formeditordemos.PersonalData,Boolean)"
+        "dialog" : "com.axonivy.demo.formeditordemos.TableUI:start()"
       },
       "visual" : {
-        "at" : { "x" : 224, "y" : 64 }
+        "at" : { "x" : 352, "y" : 64 }
       },
       "connect" : [
         { "id" : "f4", "to" : "f1", "color" : "default" }

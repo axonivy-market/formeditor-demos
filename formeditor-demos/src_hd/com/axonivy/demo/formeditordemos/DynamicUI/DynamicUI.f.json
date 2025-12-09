@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/form/12.0.6/form.json",
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
   "id" : "0c8f12b0-9d52-437b-952e-50fd9c8ea57d",
   "components" : [ {
     "cid" : "panel1",
@@ -152,8 +152,7 @@
             }
           } ]
         }
-      } ],
-      "title" : "Personal Data"
+      } ]
     }
   } ]
 }
