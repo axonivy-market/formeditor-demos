@@ -4,26 +4,12 @@
   "namespace" : "com.axonivy.demo.formeditordemos.SimpleUI",
   "isBusinessCaseData" : false,
   "fields" : [ {
-    "name" : "countries",
-    "type" : "List<String>"
-  }, {
-    "name" : "country",
-    "type" : "String"
-  }, {
-    "name" : "firstName",
-    "type" : "String",
+    "name" : "isReadOnly",
+    "type" : "Boolean",
     "modifiers" : []
   }, {
-    "name" : "lastName",
-    "type" : "String",
-    "modifiers" : []
-  }, {
-    "name" : "email",
-    "type" : "String",
-    "modifiers" : []
-  }, {
-    "name" : "dateOfBirth",
-    "type" : "String",
+    "name" : "personalInfo",
+    "type" : "com.axonivy.demo.formeditordemos.PersonalInfo",
     "modifiers" : []
   } ]
 }

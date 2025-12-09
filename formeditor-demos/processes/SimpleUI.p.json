@@ -1,6 +1,6 @@
 {
   "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
-  "id" : "19AC34C9316CD627",
+  "id" : "19B022DBC722DBD9",
   "config" : {
     "data" : "com.axonivy.demo.formeditordemos.SimpleUIData"
   },
@@ -9,7 +9,11 @@
       "type" : "RequestStart",
       "name" : "start",
       "config" : {
-        "signature" : "start"
+        "signature" : "start",
+        "request" : {
+          "name" : "<%=ivy.cms.co(\"/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/SimpleUIDemo\")%>",
+          "description" : "<%=ivy.cms.co(\"/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/SimpleUIDescription\")%>"
+        }
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 }
@@ -21,20 +25,45 @@
       "id" : "f1",
       "type" : "TaskEnd",
       "visual" : {
-        "at" : { "x" : 352, "y" : 64 }
+        "at" : { "x" : 552, "y" : 64 }
       }
     }, {
       "id" : "f3",
       "type" : "DialogCall",
       "name" : "Simple UI Demo",
       "config" : {
-        "dialog" : "com.axonivy.demo.formeditordemos.DynamicUI:start(com.axonivy.demo.formeditordemos.PersonalData,Boolean)"
+        "dialog" : "com.axonivy.demo.formeditordemos.SimpleUI:start(Boolean,com.axonivy.demo.formeditordemos.PersonalInfo)",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.personalInfo" : "result.personalInfo"
+          }
+        }
       },
       "visual" : {
-        "at" : { "x" : 224, "y" : 64 }
+        "at" : { "x" : 232, "y" : 64 }
       },
       "connect" : [
-        { "id" : "f4", "to" : "f1", "color" : "default" }
+        { "id" : "f4", "to" : "f5", "color" : "default" }
+      ]
+    }, {
+      "id" : "f5",
+      "type" : "DialogCall",
+      "name" : "Read only Simple UI",
+      "config" : {
+        "dialog" : "com.axonivy.demo.formeditordemos.SimpleUI:start(Boolean,com.axonivy.demo.formeditordemos.PersonalInfo)",
+        "call" : {
+          "map" : {
+            "param.isReadOnly" : "true",
+            "param.personalInfo" : "in.personalInfo"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 416, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f6", "to" : "f1", "color" : "default" }
       ]
     } ]
 }

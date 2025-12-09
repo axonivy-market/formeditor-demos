@@ -1,6 +1,6 @@
 {
   "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
-  "id" : "19AC306F99EE801B",
+  "id" : "19B02052CDB4E19D",
   "kind" : "HTML_DIALOG",
   "config" : {
     "data" : "com.axonivy.demo.formeditordemos.SimpleUI.SimpleUIData"
@@ -8,32 +8,50 @@
   "elements" : [ {
       "id" : "f0",
       "type" : "HtmlDialogStart",
-      "name" : "start()",
+      "name" : "start(Boolean, PersonalInfo)",
       "config" : {
         "signature" : "start",
-        "guid" : "19AC306F9D648677"
+        "input" : {
+          "params" : [
+            { "name" : "isReadOnly", "type" : "Boolean", "desc" : "" },
+            { "name" : "personalInfo", "type" : "com.axonivy.demo.formeditordemos.PersonalInfo", "desc" : "" }
+          ],
+          "map" : {
+            "out.isReadOnly" : "param.isReadOnly",
+            "out.personalInfo" : "param.personalInfo"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "personalInfo", "type" : "com.axonivy.demo.formeditordemos.PersonalInfo", "desc" : "" }
+          ],
+          "map" : {
+            "result.personalInfo" : "in.personalInfo"
+          }
+        },
+        "guid" : "19B02052CDEB53DE"
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 }
       },
       "connect" : [
-        { "id" : "f2", "to" : "f11" }
+        { "id" : "f2", "to" : "f1" }
       ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
       "visual" : {
-        "at" : { "x" : 352, "y" : 64 }
+        "at" : { "x" : 224, "y" : 64 }
       }
     }, {
       "id" : "f3",
       "type" : "HtmlDialogEventStart",
       "name" : "close",
       "config" : {
-        "guid" : "19AC306FA01A3DE3"
+        "guid" : "19B02052CE66CE48"
       },
       "visual" : {
-        "at" : { "x" : 96, "y" : 336 }
+        "at" : { "x" : 96, "y" : 160 }
       },
       "connect" : [
         { "id" : "f5", "to" : "f4" }
@@ -42,56 +60,7 @@
       "id" : "f4",
       "type" : "HtmlDialogExit",
       "visual" : {
-        "at" : { "x" : 224, "y" : 336 }
+        "at" : { "x" : 224, "y" : 160 }
       }
-    }, {
-      "id" : "f6",
-      "type" : "HtmlDialogMethodStart",
-      "name" : "initCountryList()",
-      "config" : {
-        "signature" : "method",
-        "guid" : "19AC48DCE5514839"
-      },
-      "visual" : {
-        "at" : { "x" : 96, "y" : 200 }
-      },
-      "connect" : [
-        { "id" : "f13", "to" : "f7" }
-      ]
-    }, {
-      "id" : "f7",
-      "type" : "HtmlDialogEnd",
-      "visual" : {
-        "at" : { "x" : 352, "y" : 200 }
-      }
-    }, {
-      "id" : "f11",
-      "type" : "Script",
-      "config" : {
-        "output" : {
-          "code" : [
-            "import java.util.ArrayList;",
-            "",
-            "List<String> countries = new ArrayList();",
-            "",
-            "countries.add(\"Please choose a country\");",
-            "countries.add(\"Vietnam\");",
-            "countries.add(\"Germany\");",
-            "countries.add(\"Japan\");",
-            "countries.add(\"Cambodia\");",
-            "countries.add(\"Thailand\");",
-            "countries.add(\"Malaysia\");",
-            "countries.add(\"Moxambique\");",
-            "",
-            "in.countries = countries;"
-          ]
-        }
-      },
-      "visual" : {
-        "at" : { "x" : 224, "y" : 64 }
-      },
-      "connect" : [
-        { "id" : "f12", "to" : "f1", "color" : "default" }
-      ]
     } ]
 }
