@@ -1,0 +1,68 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "id" : "19B025D79E356130",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "com.axonivy.demo.formeditordemos.SimpleUI.SimpleUIData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start(Boolean,PersonalInfo)",
+      "config" : {
+        "signature" : "start",
+        "input" : {
+          "params" : [
+            { "name" : "isReadOnly", "type" : "Boolean", "desc" : "" },
+            { "name" : "personalInfo", "type" : "com.axonivy.demo.formeditordemos.PersonalInfo", "desc" : "" }
+          ],
+          "map" : {
+            "out.isReadOnly" : "param.isReadOnly",
+            "out.personalInfo" : "param.personalInfo"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "personalInfo", "type" : "com.axonivy.demo.formeditordemos.PersonalInfo", "desc" : "" }
+          ],
+          "map" : {
+            "result.personalInfo" : "in.personalInfo"
+          }
+        },
+        "guid" : "19B025D79E595ED0"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 },
+        "labelOffset" : { "x" : 10, "y" : 30 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "19B025D79F44637D"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 }
+      },
+      "connect" : [
+        { "id" : "f5", "to" : "f4" }
+      ]
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 },
+        "labelOffset" : { "x" : 10, "y" : 30 }
+      }
+    } ]
+}

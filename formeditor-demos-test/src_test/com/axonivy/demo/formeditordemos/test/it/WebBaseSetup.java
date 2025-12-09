@@ -12,9 +12,11 @@ import org.apache.commons.lang3.StringUtils;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.SetValueOptions;
 
 public class WebBaseSetup {
   protected static final String DYNAMIC_UI_PROCESS_PATH = "formeditor-demos/19AC88F44CEAAC4D/start.ivp";
+  protected static final String SIMPLE_UI_PROCESS_PATH = "formeditor-demos/19B0260A905594CF/start.ivp";
   protected static final int DEFAULT_TIMEOUT_DURATION = 2;
   protected static final String LOGIN_URL = "formeditor-demos-test/19AD8A34AE465F0C/login.ivp?username=%s&password=%s";
   protected static final String DEVELOPER_USER = "Developer";
@@ -25,8 +27,28 @@ public class WebBaseSetup {
     open(EngineUrl.createProcessUrl(DYNAMIC_UI_PROCESS_PATH));
   }
 
-  protected void verifyAndClickItemLabelInDropdown(String dropdownCssSelector, String labelText, String dropdownListSuffix,
-      String dropdownLabelSuffix) {
+  protected void startSimpleUIProcess() {
+    open(EngineUrl.createProcessUrl(SIMPLE_UI_PROCESS_PATH));
+  }
+
+  protected void fillInput(String inputCssSelector, String inputValue) {
+    var input = verifyElementVisible(inputCssSelector);
+    input.setValue(SetValueOptions.withText(inputValue));
+    input.shouldHave(Condition.value(inputValue), Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
+  }
+
+  protected void verifyReadOnlyInput(String inputCssSelector) {
+    verifyElementVisible(inputCssSelector);
+    $(inputCssSelector).shouldBe(Condition.disabled);
+  }
+
+  protected void verifyReadOnlyDropdown(String inputCssSelector) {
+    verifyElementVisible(inputCssSelector);
+    $(inputCssSelector).shouldHave(Condition.cssClass("ui-state-disabled"));
+  }
+
+  protected void verifyAndClickItemLabelInDropdown(String dropdownCssSelector, String labelText,
+      String dropdownListSuffix, String dropdownLabelSuffix) {
     // Click target drop down when it's ready
     var dropdown = verifyElementVisible(dropdownCssSelector);
     dropdown.click();
@@ -35,11 +57,13 @@ public class WebBaseSetup {
     verifyElementVisible(dropdownListCssSelector);
 
     // Find the dropdown item that matches the label text
-    SelenideElement targetElement = $$(dropdownListCssSelector + " li").stream().filter(item -> labelText.equals(item.text())).findAny()
-        .orElseThrow(() -> new AssertionError(getDropdownItemNotFoundMessage(labelText)))
-        .shouldBe(visible, Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
+    SelenideElement targetElement =
+        $$(dropdownListCssSelector + " li").stream().filter(item -> labelText.equals(item.text())).findAny()
+            .orElseThrow(() -> new AssertionError(getDropdownItemNotFoundMessage(labelText)))
+            .shouldBe(visible, Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
     targetElement.click();
-    $(dropdownCssSelector + dropdownLabelSuffix).shouldBe(Condition.text(labelText), Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
+    $(dropdownCssSelector + dropdownLabelSuffix).shouldBe(Condition.text(labelText),
+        Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
   }
 
   protected String getDropdownItemNotFoundMessage(String optionName) {

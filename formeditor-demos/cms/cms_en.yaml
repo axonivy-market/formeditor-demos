@@ -13,3 +13,18 @@ Dialogs:
             FirstName: First Name
             LastName: Last Name
             Submit: Submit
+          SimpleUI:
+            AboutMe: About me
+            Age: Age
+            Approve: Approve
+            Cancel: Cancel
+            Country: Country
+            DateOfBirth: Date of Birth
+            Email: E-mail
+            FirstName: First Name
+            LastName: Last Name
+            PersonalInfo: Personal Info
+            RequiredField: This field is required
+            SelectACountry: Please select a country
+            Submit: Submit
+            TermsAccepted: I accept the terms

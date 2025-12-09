@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "SimpleUIData",
+  "namespace" : "com.axonivy.demo.formeditordemos.SimpleUI",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "isReadOnly",
+    "type" : "Boolean",
+    "modifiers" : []
+  }, {
+    "name" : "personalInfo",
+    "type" : "com.axonivy.demo.formeditordemos.PersonalInfo",
+    "modifiers" : []
+  } ]
+}
