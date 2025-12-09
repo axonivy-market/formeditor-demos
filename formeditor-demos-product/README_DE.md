@@ -1,4 +1,0 @@
-# Axon Ivy Form Editor Demos
-
-Der Axon Ivy Form Editor ist ein benutzerfreundliches Design-Tool, mit dem Sie Formulare visuell erstellen können. Anstatt Code zu schreiben, ziehen Sie einfach Elemente per Drag & Drop auf den Bildschirm, um ihn zu gestalten. So geht es schneller und ist für alle leichter zugänglich.
-Dieses Demo-Projekt zeigt, wie Formulare innerhalb eines Prozesses erstellt und verwendet werden können. Es enthält ein einfaches und praktisches Beispiel, damit Benutzer Schritt für Schritt verstehen, wie sie ein Formular entwerfen, es mit Informationen verknüpfen und damit interagieren können – auch ohne tiefgreifende technische Kenntnisse.
