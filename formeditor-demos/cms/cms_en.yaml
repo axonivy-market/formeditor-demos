@@ -13,3 +13,6 @@ Dialogs:
             FirstName: First Name
             LastName: Last Name
             Submit: Submit
+Processes:
+  DynamicUIDemo:
+    name: Dynamic UI Demo

@@ -2,14 +2,17 @@
   "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "19AC88F44CEAAC4D",
   "config" : {
-    "data": "com.axonivy.demo.formeditordemos.DynamicUIData"
+    "data" : "com.axonivy.demo.formeditordemos.DynamicUIData"
   },
   "elements" : [ {
       "id" : "f0",
       "type" : "RequestStart",
       "name" : "start",
       "config" : {
-        "signature" : "start"
+        "signature" : "start",
+        "request" : {
+          "name" : "<%=ivy.cms.co(\"/Processes/DynamicUIDemo/name\")%>"
+        }
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 }
@@ -29,7 +32,7 @@
       "type" : "DialogCall",
       "name" : "Dynamic UI demo",
       "config" : {
-        "dialog": "com.axonivy.demo.formeditordemos.DynamicUI:start(com.axonivy.demo.formeditordemos.PersonalData,Boolean)",
+        "dialog" : "com.axonivy.demo.formeditordemos.DynamicUI:start(com.axonivy.demo.formeditordemos.PersonalData,Boolean)",
         "output" : {
           "map" : {
             "out" : "in",
@@ -48,7 +51,7 @@
       "type" : "DialogCall",
       "name" : "Read only dialog",
       "config" : {
-        "dialog": "com.axonivy.demo.formeditordemos.DynamicUI:start(com.axonivy.demo.formeditordemos.PersonalData,Boolean)",
+        "dialog" : "com.axonivy.demo.formeditordemos.DynamicUI:start(com.axonivy.demo.formeditordemos.PersonalData,Boolean)",
         "call" : {
           "map" : {
             "param.data" : "in.data",
