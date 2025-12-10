@@ -21,19 +21,48 @@
       "id" : "f1",
       "type" : "TaskEnd",
       "visual" : {
-        "at" : { "x" : 616, "y" : 64 }
+        "at" : { "x" : 784, "y" : 64 }
       }
     }, {
       "id" : "f3",
       "type" : "DialogCall",
       "config" : {
-        "dialog" : "com.axonivy.demo.formeditordemos.TableUI:start()"
+        "dialog" : "com.axonivy.demo.formeditordemos.TableUI:start(List<com.axonivy.demo.formeditordemos.TravelData>,Boolean)",
+        "call" : {
+          "map" : {
+            "param.isReadOnly" : "false"
+          }
+        },
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.data" : "result.travelDataList"
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 352, "y" : 64 }
       },
       "connect" : [
-        { "id" : "f4", "to" : "f1", "color" : "default" }
+        { "id" : "f4", "to" : "f5", "color" : "default" }
+      ]
+    }, {
+      "id" : "f5",
+      "type" : "DialogCall",
+      "config" : {
+        "dialog" : "com.axonivy.demo.formeditordemos.TableUI:start(List<com.axonivy.demo.formeditordemos.TravelData>,Boolean)",
+        "call" : {
+          "map" : {
+            "param.travelDataList" : "in.data",
+            "param.isReadOnly" : "true"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 584, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f6", "to" : "f1", "color" : "default" }
       ]
     } ]
 }

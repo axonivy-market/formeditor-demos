@@ -5,5 +5,8 @@
   "fields" : [ {
     "name" : "data",
     "type" : "List<com.axonivy.demo.formeditordemos.TravelData>"
+  }, {
+    "name" : "isReadOnly",
+    "type" : "Boolean"
   } ]
 }

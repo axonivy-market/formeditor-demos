@@ -2,90 +2,98 @@
   "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
   "id" : "d0aac62d-74a5-44d6-a776-1904e9b9d65d",
   "components" : [ {
-    "cid" : "datatable4",
-    "type" : "DataTable",
+    "cid" : "fieldset28",
+    "type" : "Fieldset",
     "config" : {
-      "updateOnChange" : true,
       "components" : [ {
-        "cid" : "datatablecolumn6",
-        "type" : "DataTableColumn",
+        "cid" : "datatable4",
+        "type" : "DataTable",
         "config" : {
-          "header" : "category",
-          "value" : "#{currentRow.category}"
-        }
-      }, {
-        "cid" : "datatablecolumn5",
-        "type" : "DataTableColumn",
-        "config" : {
-          "header" : "amount",
-          "value" : "#{currentRow.amount}"
-        }
-      }, {
-        "cid" : "datatablecolumn7",
-        "type" : "DataTableColumn",
-        "config" : {
-          "header" : "date",
-          "value" : "#{currentRow.date}"
-        }
-      }, {
-        "cid" : "datatablecolumn8",
-        "type" : "DataTableColumn",
-        "config" : {
-          "header" : "description",
-          "value" : "#{currentRow.description}"
-        }
-      }, {
-        "cid" : "datatablecolumn11",
-        "type" : "DataTableColumn",
-        "config" : {
-          "header" : "Actions",
+          "disabled" : "#{data.isReadOnly}",
+          "updateOnChange" : true,
           "components" : [ {
-            "cid" : "button22",
-            "type" : "Button",
+            "cid" : "datatablecolumn6",
+            "type" : "DataTableColumn",
             "config" : {
-              "action" : "editRow",
-              "rounded" : true,
-              "type" : "EDIT",
-              "icon" : "pi pi-pencil"
+              "header" : "category",
+              "value" : "#{currentRow.category}"
             }
           }, {
-            "cid" : "button23",
-            "type" : "Button",
+            "cid" : "datatablecolumn5",
+            "type" : "DataTableColumn",
             "config" : {
-              "action" : "deleteRow",
-              "variant" : "DANGER",
-              "rounded" : true,
-              "type" : "DELETE",
-              "icon" : "pi pi-trash",
-              "confirmDialog" : true,
-              "confirmHeader" : "Delete Confirmation",
-              "confirmMessage" : "Are you sure you want to delete row: #{currentRow.category}?",
-              "confirmOkValue" : "Yes",
-              "confirmCancelValue" : "No"
+              "header" : "amount",
+              "value" : "#{currentRow.amount}"
+            }
+          }, {
+            "cid" : "datatablecolumn7",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "date",
+              "value" : "#{currentRow.date}"
+            }
+          }, {
+            "cid" : "datatablecolumn8",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "description",
+              "value" : "#{currentRow.description}"
+            }
+          }, {
+            "cid" : "datatablecolumn11",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "Actions",
+              "components" : [ {
+                "cid" : "button22",
+                "type" : "Button",
+                "config" : {
+                  "action" : "editRow",
+                  "rounded" : true,
+                  "type" : "EDIT",
+                  "icon" : "pi pi-pencil"
+                }
+              }, {
+                "cid" : "button23",
+                "type" : "Button",
+                "config" : {
+                  "action" : "deleteRow",
+                  "variant" : "DANGER",
+                  "rounded" : true,
+                  "type" : "DELETE",
+                  "icon" : "pi pi-trash",
+                  "confirmDialog" : true,
+                  "confirmHeader" : "Delete Confirmation",
+                  "confirmMessage" : "Are you sure you want to delete row: #{currentRow.category}?",
+                  "confirmOkValue" : "Yes",
+                  "confirmCancelValue" : "No"
+                }
+              } ],
+              "asActionColumn" : true
             }
           } ],
-          "asActionColumn" : true
+          "value" : "#{data.data}",
+          "maxRows" : "10",
+          "isEditable" : true,
+          "editDialogId" : "dialog20",
+          "addButton" : true
         }
-      } ],
-      "value" : "#{data.data}",
-      "maxRows" : "10",
-      "isEditable" : true,
-      "editDialogId" : "dialog20",
-      "addButton" : true
-    }
-  }, {
-    "cid" : "layout18",
-    "type" : "Layout",
-    "config" : {
-      "components" : [ {
-        "cid" : "text19",
-        "type" : "Text",
+      }, {
+        "cid" : "layout18",
+        "type" : "Layout",
         "config" : {
-          "id" : "total-amount-id",
-          "content" : "Total amount: #{data.data.size()}"
+          "components" : [ {
+            "cid" : "text19",
+            "type" : "Text",
+            "config" : {
+              "id" : "total-amount-id",
+              "content" : "Total amount: #{data.data.size()}"
+            }
+          } ],
+          "gridVariant" : "FREE"
         }
       } ],
-      "gridVariant" : "FREE"
+      "label" : "Travel Expenses"
     }
   }, {
     "cid" : "layout1",
@@ -102,10 +110,21 @@
           "processOnlySelf" : true
         }
       }, {
+        "cid" : "button29",
+        "type" : "Button",
+        "config" : {
+          "visible" : "#{data.isReadOnly}",
+          "name" : "Approve",
+          "action" : "#{logic.close}",
+          "rounded" : true,
+          "icon" : "si si-check-1"
+        }
+      }, {
         "cid" : "button3",
         "type" : "Button",
         "config" : {
-          "name" : "Proceed",
+          "visible" : "#{!data.isReadOnly}",
+          "name" : "Submit",
           "action" : "#{logic.close}",
           "type" : "SUBMIT",
           "icon" : "si si-check-1"

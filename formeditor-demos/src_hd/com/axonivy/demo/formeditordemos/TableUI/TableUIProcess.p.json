@@ -8,9 +8,27 @@
   "elements" : [ {
       "id" : "f0",
       "type" : "HtmlDialogStart",
-      "name" : "start()",
+      "name" : "start(TravelData>,Boolean)",
       "config" : {
         "signature" : "start",
+        "input" : {
+          "params" : [
+            { "name" : "travelDataList", "type" : "List<com.axonivy.demo.formeditordemos.TravelData>", "desc" : "" },
+            { "name" : "isReadOnly", "type" : "Boolean", "desc" : "" }
+          ],
+          "map" : {
+            "out.data" : "param.travelDataList",
+            "out.isReadOnly" : "param.isReadOnly"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "travelDataList", "type" : "List<com.axonivy.demo.formeditordemos.TravelData>", "desc" : "" }
+          ],
+          "map" : {
+            "result.travelDataList" : "in.data"
+          }
+        },
         "guid" : "19B0242AECB7B86E"
       },
       "visual" : {
