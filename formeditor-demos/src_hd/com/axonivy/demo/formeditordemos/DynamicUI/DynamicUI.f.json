@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/form/12.0.6/form.json",
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
   "id" : "0c8f12b0-9d52-437b-952e-50fd9c8ea57d",
   "components" : [ {
     "cid" : "panel1",
@@ -16,7 +16,7 @@
             "config" : {
               "id" : "first-name",
               "disabled" : "#{data.isReadOnly}",
-              "label": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/FirstName')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/FirstName')}",
               "value" : "#{data.data.firstName}"
             }
           }, {
@@ -25,7 +25,7 @@
             "config" : {
               "id" : "last-name",
               "disabled" : "#{data.isReadOnly}",
-              "label": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/LastName')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/LastName')}",
               "value" : "#{data.data.lastName}"
             }
           }, {
@@ -34,7 +34,7 @@
             "config" : {
               "id" : "email",
               "disabled" : "#{data.isReadOnly}",
-              "label": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Email')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Email')}",
               "value" : "#{data.data.email}",
               "type" : "EMAIL"
             }
@@ -44,7 +44,7 @@
             "config" : {
               "id" : "date-of-birth",
               "disabled" : "#{data.isReadOnly}",
-              "label": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/DateOfBirth')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/DateOfBirth')}",
               "value" : "#{data.data.dateOfBirth}"
             }
           } ]
@@ -72,7 +72,7 @@
             "label" : "Vietnam",
             "value" : "Vietnam"
           } ],
-          "label": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Country')}",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Country')}",
           "value" : "#{data.data.country}"
         }
       }, {
@@ -126,7 +126,7 @@
             "value" : "Thuringen"
           } ],
           "dynamicItemsLabel" : "#{item.officialName}",
-          "label": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/FederalState')}",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/FederalState')}",
           "value" : "#{data.data.federalState}"
         }
       }, {
@@ -139,7 +139,7 @@
             "type" : "Button",
             "config" : {
               "id" : "cancel",
-              "name": "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Cancel')}",
+              "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Cancel')}",
               "action" : "void()"
             }
           }, {
@@ -147,13 +147,12 @@
             "type" : "Button",
             "config" : {
               "id" : "submit",
-              "name": "#{data.isReadOnly ? ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Approved') : ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Submit') }",
+              "name" : "#{data.isReadOnly ? ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Approved') : ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/DynamicUI/Submit') }",
               "action" : "#{logic.close}"
             }
           } ]
         }
-      } ],
-      "title" : "Personal Data"
+      } ]
     }
   } ]
 }

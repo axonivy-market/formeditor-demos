@@ -1,54 +1,54 @@
 {
   "$schema" : "https://json-schema.axonivy.com/process/13.2.0/process.json",
-  "id" : "19AC660D1BD23B7B",
+  "id" : "19B077D5BCF6429D",
   "kind" : "HTML_DIALOG",
   "config" : {
-    "data" : "com.axonivy.demo.formeditordemos.DynamicUI.DynamicUIData"
+    "data" : "com.axonivy.demo.formeditordemos.TableUI.TableUIData"
   },
   "elements" : [ {
       "id" : "f0",
       "type" : "HtmlDialogStart",
-      "name" : "start(PersonalData,Boolean)",
+      "name" : "start(TravelData>,Boolean)",
       "config" : {
         "signature" : "start",
         "input" : {
           "params" : [
-            { "name" : "data", "type" : "com.axonivy.demo.formeditordemos.PersonalData", "desc" : "" },
+            { "name" : "travelDataList", "type" : "List<com.axonivy.demo.formeditordemos.TravelData>", "desc" : "" },
             { "name" : "isReadOnly", "type" : "Boolean", "desc" : "" }
           ],
           "map" : {
-            "out.data" : "param.data",
+            "out.data" : "param.travelDataList",
             "out.isReadOnly" : "param.isReadOnly"
           }
         },
         "result" : {
           "params" : [
-            { "name" : "data", "type" : "com.axonivy.demo.formeditordemos.PersonalData", "desc" : "" }
+            { "name" : "travelDataList", "type" : "List<com.axonivy.demo.formeditordemos.TravelData>", "desc" : "" }
           ],
           "map" : {
-            "result.data" : "in.data"
+            "result.travelDataList" : "in.data"
           }
         },
-        "guid" : "19AC660D1BFADCC0"
+        "guid" : "19B077D5BCF5D79A"
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 64 }
       },
       "connect" : [
-        { "id" : "f2", "to" : "f1" }
+        { "id" : "f6", "to" : "f1" }
       ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
       "visual" : {
-        "at" : { "x" : 224, "y" : 64 }
+        "at" : { "x" : 240, "y" : 64 }
       }
     }, {
       "id" : "f3",
       "type" : "HtmlDialogEventStart",
       "name" : "close",
       "config" : {
-        "guid" : "19AC660D1EA739C4"
+        "guid" : "19B077D5BD1C20B3"
       },
       "visual" : {
         "at" : { "x" : 96, "y" : 160 }

@@ -1,0 +1,9 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/13.2.0/data-class.json",
+  "simpleName" : "TableUIData",
+  "namespace" : "com.axonivy.demo.formeditordemos",
+  "fields" : [ {
+    "name" : "data",
+    "type" : "List<com.axonivy.demo.formeditordemos.TravelData>"
+  } ]
+}
