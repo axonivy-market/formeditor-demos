@@ -15,6 +15,7 @@ import com.codeborne.selenide.SelenideElement;
 
 public class WebBaseSetup {
   protected static final String DYNAMIC_UI_PROCESS_PATH = "formeditor-demos/19AC88F44CEAAC4D/start.ivp";
+  protected static final String TABLE_UI_PROCESS_PATH = "formeditor-demos/19B077AD2CF11562/start.ivp";
   protected static final int DEFAULT_TIMEOUT_DURATION = 2;
   protected static final String LOGIN_URL = "formeditor-demos-test/19AD8A34AE465F0C/login.ivp?username=%s&password=%s";
   protected static final String DEVELOPER_USER = "Developer";
@@ -25,8 +26,12 @@ public class WebBaseSetup {
     open(EngineUrl.createProcessUrl(DYNAMIC_UI_PROCESS_PATH));
   }
 
-  protected void verifyAndClickItemLabelInDropdown(String dropdownCssSelector, String labelText, String dropdownListSuffix,
-      String dropdownLabelSuffix) {
+  protected void startTableUIProcess() {
+    open(EngineUrl.createProcessUrl(TABLE_UI_PROCESS_PATH));
+  }
+
+  protected void verifyAndClickItemLabelInDropdown(String dropdownCssSelector, String labelText,
+      String dropdownListSuffix, String dropdownLabelSuffix) {
     // Click target drop down when it's ready
     var dropdown = verifyElementVisible(dropdownCssSelector);
     dropdown.click();
@@ -35,11 +40,13 @@ public class WebBaseSetup {
     verifyElementVisible(dropdownListCssSelector);
 
     // Find the dropdown item that matches the label text
-    SelenideElement targetElement = $$(dropdownListCssSelector + " li").stream().filter(item -> labelText.equals(item.text())).findAny()
-        .orElseThrow(() -> new AssertionError(getDropdownItemNotFoundMessage(labelText)))
-        .shouldBe(visible, Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
+    SelenideElement targetElement =
+        $$(dropdownListCssSelector + " li").stream().filter(item -> labelText.equals(item.text())).findAny()
+            .orElseThrow(() -> new AssertionError(getDropdownItemNotFoundMessage(labelText)))
+            .shouldBe(visible, Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
     targetElement.click();
-    $(dropdownCssSelector + dropdownLabelSuffix).shouldBe(Condition.text(labelText), Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
+    $(dropdownCssSelector + dropdownLabelSuffix).shouldBe(Condition.text(labelText),
+        Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
   }
 
   protected String getDropdownItemNotFoundMessage(String optionName) {
