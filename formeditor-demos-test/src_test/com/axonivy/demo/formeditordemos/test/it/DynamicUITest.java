@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import com.axonivy.ivy.webtest.IvyWebTest;
 
-@IvyWebTest(headless = false)
+@IvyWebTest
 public class DynamicUITest extends WebBaseSetup {
 
   private static final String COUNTRY_DROPDOWN_CSS_SELECTOR = "#form\\:country";

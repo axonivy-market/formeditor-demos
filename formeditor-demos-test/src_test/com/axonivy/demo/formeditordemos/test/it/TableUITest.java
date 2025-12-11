@@ -10,7 +10,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
-@IvyWebTest(headless = false)
+@IvyWebTest
 public class TableUITest extends WebBaseSetup {
   @Test
   void TableUIAddingNewTabledata() {
