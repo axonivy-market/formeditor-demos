@@ -16,6 +16,9 @@
             { "name" : "isReadOnly", "type" : "Boolean", "desc" : "" }
           ],
           "map" : { }
+        },
+        "request" : {
+          "name" : "<%=ivy.cms.co(\"/Processes/TableUIDemo/name\")%>"
         }
       },
       "visual" : {

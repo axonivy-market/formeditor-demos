@@ -28,3 +28,5 @@ Dialogs:
 Processes:
   DynamicUIDemo:
     name: Dynamic UI Demo
+  TableUIDemo:
+    name: Table UI Demo
