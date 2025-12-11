@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/form/13.1.0/form.json",
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
   "id" : "d3e71256-b45e-4944-b20b-95904e119a9a",
   "components" : [ {
     "cid" : "panel8",
@@ -79,8 +79,7 @@
           "label" : "About me",
           "rows" : "5"
         }
-      } ],
-      "title" : "Personal information"
+      } ]
     }
   }, {
     "cid" : "layout19",

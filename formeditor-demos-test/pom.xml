@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.axonivy.ivy.api</groupId>
     <artifactId>ivy-project-parent</artifactId>
-    <version>13.1.1</version>
+    <version>13.2.0-SNAPSHOT</version>
     <relativePath></relativePath>
   </parent>
   <groupId>com.axonivy.demo.formeditordemos</groupId>
@@ -16,28 +16,6 @@
     <tester.version>13.1.1</tester.version>
     <project.build.plugin.version>13.1.1</project.build.plugin.version>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>com.axonivy.demo.formeditordemos</groupId>
-      <artifactId>formeditor-demos</artifactId>
-      <version>${project.version}</version>
-      <type>iar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.axonivy.ivy.test</groupId>
-      <artifactId>unit-tester</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.axonivy.ivy.webtest</groupId>
-      <artifactId>web-tester</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.axonivy.ivy.api</groupId>
-      <artifactId>ivy-api</artifactId>
-    </dependency>
-  </dependencies>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -47,6 +25,28 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.axonivy.demo.formeditordemos</groupId>
+      <artifactId>formeditor-demos</artifactId>
+      <version>${project.version}</version>
+      <type>iar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axonivy.ivy.api.test</groupId>
+      <artifactId>ivy-test-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.axonivy.ivy.api.test</groupId>
+      <artifactId>ivy-web-test-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.axonivy.ivy.api</groupId>
+      <artifactId>ivy-api</artifactId>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <snapshots>
