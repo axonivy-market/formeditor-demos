@@ -12,10 +12,12 @@ import org.apache.commons.lang3.StringUtils;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.SetValueOptions;
 
 public class WebBaseSetup {
   protected static final String DYNAMIC_UI_PROCESS_PATH = "formeditor-demos/19AC88F44CEAAC4D/start.ivp";
   protected static final String TABLE_UI_PROCESS_PATH = "formeditor-demos/19B077AD2CF11562/start.ivp";
+  protected static final String SIMPLE_UI_PROCESS_PATH = "formeditor-demos/19B022DBC722DBD9/start.ivp";
   protected static final int DEFAULT_TIMEOUT_DURATION = 2;
   protected static final String LOGIN_URL = "formeditor-demos-test/19AD8A34AE465F0C/login.ivp?username=%s&password=%s";
   protected static final String DEVELOPER_USER = "Developer";
@@ -28,6 +30,26 @@ public class WebBaseSetup {
 
   protected void startTableUIProcess() {
     open(EngineUrl.createProcessUrl(TABLE_UI_PROCESS_PATH));
+  }
+
+  protected void startSimpleUIProcess() {
+    open(EngineUrl.createProcessUrl(SIMPLE_UI_PROCESS_PATH));
+  }
+
+  protected void fillInput(String inputCssSelector, String inputValue) {
+    var input = verifyElementVisible(inputCssSelector);
+    input.setValue(SetValueOptions.withText(inputValue));
+    input.shouldHave(Condition.value(inputValue), Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
+  }
+
+  protected void verifyReadOnlyInput(String inputCssSelector) {
+    verifyElementVisible(inputCssSelector);
+    $(inputCssSelector).shouldBe(Condition.disabled);
+  }
+
+  protected void verifyReadOnlyDropdown(String inputCssSelector) {
+    verifyElementVisible(inputCssSelector);
+    $(inputCssSelector).shouldHave(Condition.cssClass("ui-state-disabled"));
   }
 
   protected void verifyAndClickItemLabelInDropdown(String dropdownCssSelector, String labelText,
