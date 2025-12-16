@@ -13,6 +13,21 @@ Dialogs:
             FirstName: First Name
             LastName: Last Name
             Submit: Submit
+          SimpleUI:
+            AboutMe: About Me
+            Age: Age
+            Approve: Approve
+            Cancel: Cancel
+            Country: Country
+            DateOfBirth: Date of Birth
+            Email: E-mail
+            FirstName: First Name
+            InvalidEmail: Invalid E-mail
+            LastName: Last Name
+            PersonalInfo: Personal Info
+            RequiredField: This field is required
+            Submit: Submit
+            TermsAccepted: I accept the terms
           TableUI:
             Actions: Actions
             Amount: Amount
@@ -28,5 +43,7 @@ Dialogs:
 Processes:
   DynamicUIDemo:
     name: Dynamic UI Demo
+  SimpleUIDemo:
+    name: Simple UI Demo
   TableUIDemo:
     name: Table UI Demo

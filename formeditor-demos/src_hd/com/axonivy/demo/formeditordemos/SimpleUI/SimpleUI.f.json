@@ -1,112 +1,173 @@
 {
   "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
-  "id" : "d3e71256-b45e-4944-b20b-95904e119a9a",
+  "id" : "20b77810-719a-4e71-9c1b-6c562b2f3d66",
   "components" : [ {
-    "cid" : "panel8",
-    "type" : "Panel",
+    "cid" : "fieldset1",
+    "type" : "Fieldset",
     "config" : {
+      "id" : "personal-info",
       "components" : [ {
-        "cid" : "layout10",
+        "cid" : "layout2",
         "type" : "Layout",
         "config" : {
           "components" : [ {
-            "cid" : "input11",
+            "cid" : "input4",
             "type" : "Input",
             "config" : {
+              "id" : "first-name",
+              "disabled" : "#{data.isReadOnly eq 'true'}",
               "required" : "#{true}",
-              "requiredMessage" : "This field is required.",
-              "label" : "First Name"
+              "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/FirstName')}",
+              "value" : "#{data.personalInfoData.firstName}",
+              "validationMessage" : "Invalid E-Mail"
             }
           }, {
-            "cid" : "input12",
+            "cid" : "input5",
             "type" : "Input",
             "config" : {
+              "id" : "last-name",
+              "disabled" : "#{data.isReadOnly eq 'true'}",
               "required" : "#{true}",
-              "requiredMessage" : "This field is required.",
-              "label" : "Last Name"
-            }
-          } ]
-        }
-      }, {
-        "cid" : "layout13",
-        "type" : "Layout",
-        "config" : {
-          "components" : [ {
-            "cid" : "input9",
-            "type" : "Input",
-            "config" : {
-              "updateOnChange" : true,
-              "required" : "#{true}",
-              "requiredMessage" : "This field is required.",
-              "label" : "E-mail",
-              "type" : "EMAIL"
+              "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/LastName')}",
+              "value" : "#{data.personalInfoData.lastName}",
+              "validationMessage" : "Invalid E-Mail"
             }
           }, {
-            "cid" : "input14",
+            "cid" : "input6",
             "type" : "Input",
             "config" : {
-              "label" : "Age",
-              "type" : "NUMBER"
+              "id" : "email",
+              "disabled" : "#{data.isReadOnly eq 'true'}",
+              "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Email')}",
+              "value" : "#{data.personalInfoData.email}",
+              "type" : "EMAIL",
+              "validationMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/InvalidEmail')}"
             }
-          } ]
-        }
-      }, {
-        "cid" : "layout15",
-        "type" : "Layout",
-        "config" : {
-          "components" : [ {
-            "cid" : "datepicker16",
+          }, {
+            "cid" : "input3",
+            "type" : "Input",
+            "config" : {
+              "id" : "age",
+              "disabled" : "#{data.isReadOnly eq 'true'}",
+              "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Age')}",
+              "value" : "#{data.personalInfoData.age}",
+              "type" : "NUMBER",
+              "validationMessage" : "Invalid E-Mail"
+            }
+          }, {
+            "cid" : "datepicker7",
             "type" : "DatePicker",
             "config" : {
-              "label" : "Date of birth"
+              "id" : "date-of-birth",
+              "disabled" : "#{data.isReadOnly eq 'true'}",
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/DateOfBirth')}",
+              "value" : "#{data.personalInfoData.dateOfBirth}"
             }
           }, {
-            "cid" : "select17",
+            "cid" : "select8",
             "type" : "Select",
             "config" : {
-              "disabled" : "true",
-              "required" : "true",
-              "dynamicItemsList" : "#{data.countries}",
-              "label" : "Country",
-              "value" : "#{data.country}"
+              "id" : "country",
+              "disabled" : "#{data.isReadOnly eq 'true'}",
+              "staticItems" : [ {
+                "label" : "Germany",
+                "value" : "Germany"
+              }, {
+                "label" : "Switzerland",
+                "value" : "Switzerland"
+              }, {
+                "label" : "Austria",
+                "value" : "Austria"
+              }, {
+                "label" : "Vietnam",
+                "value" : "Vietnam"
+              } ],
+              "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Country')}",
+              "value" : "#{data.personalInfoData.country}"
             }
           } ]
         }
       }, {
-        "cid" : "textarea18",
+        "cid" : "textarea9",
         "type" : "Textarea",
         "config" : {
-          "label" : "About me",
+          "id" : "about-me",
+          "disabled" : "#{data.isReadOnly eq 'true'}",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/AboutMe')}",
+          "value" : "#{data.personalInfoData.aboutMe}",
           "rows" : "5"
         }
-      } ]
-    }
-  }, {
-    "cid" : "layout19",
-    "type" : "Layout",
-    "config" : {
-      "components" : [ {
-        "cid" : "button20",
-        "type" : "Button",
+      }, {
+        "cid" : "checkbox10",
+        "type" : "Checkbox",
         "config" : {
-          "name" : "Cancel",
-          "action" : "#{ivyWorkflowView.cancel()}",
-          "variant" : "SECONDARY",
-          "style" : "FLAT",
-          "processOnlySelf" : true
+          "id" : "terms-accepted",
+          "disabled" : "#{data.isReadOnly eq 'true'}",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/TermsAccepted')}",
+          "value" : "#{data.personalInfoData.termsAccepted}"
         }
       }, {
-        "cid" : "button21",
-        "type" : "Button",
+        "cid" : "layout14",
+        "type" : "Layout",
         "config" : {
-          "name" : "Proceed",
-          "action" : "#{logic.close}",
-          "type" : "SUBMIT",
-          "icon" : "si si-check-1"
+          "visible" : "#{data.isReadOnly eq 'false'}",
+          "components" : [ {
+            "cid" : "button15",
+            "type" : "Button",
+            "config" : {
+              "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Cancel')}",
+              "action" : "#{ivyWorkflowView.cancel()}",
+              "variant" : "SECONDARY",
+              "style" : "FLAT",
+              "processOnlySelf" : true
+            }
+          }, {
+            "cid" : "button16",
+            "type" : "Button",
+            "config" : {
+              "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Submit')}",
+              "action" : "#{logic.close}",
+              "type" : "SUBMIT",
+              "icon" : "si si-check-1"
+            }
+          } ],
+          "type" : "FLEX",
+          "justifyContent" : "END"
+        }
+      }, {
+        "cid" : "layout11",
+        "type" : "Layout",
+        "config" : {
+          "visible" : "#{data.isReadOnly eq 'true'}",
+          "components" : [ {
+            "cid" : "button12",
+            "type" : "Button",
+            "config" : {
+              "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Cancel')}",
+              "action" : "#{ivyWorkflowView.cancel()}",
+              "variant" : "SECONDARY",
+              "style" : "FLAT",
+              "processOnlySelf" : true
+            }
+          }, {
+            "cid" : "button13",
+            "type" : "Button",
+            "config" : {
+              "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Approve')}",
+              "action" : "#{logic.close}",
+              "type" : "SUBMIT",
+              "icon" : "si si-check-1"
+            }
+          } ],
+          "type" : "FLEX",
+          "justifyContent" : "END"
         }
       } ],
-      "type" : "FLEX",
-      "justifyContent" : "END"
+      "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/PersonalInfo')}"
     }
   } ]
 }
