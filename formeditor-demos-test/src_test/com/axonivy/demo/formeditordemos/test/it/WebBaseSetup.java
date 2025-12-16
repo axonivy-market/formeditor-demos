@@ -17,7 +17,7 @@ import com.codeborne.selenide.SetValueOptions;
 public class WebBaseSetup {
   protected static final String DYNAMIC_UI_PROCESS_PATH = "formeditor-demos/19AC88F44CEAAC4D/start.ivp";
   protected static final String TABLE_UI_PROCESS_PATH = "formeditor-demos/19B077AD2CF11562/start.ivp";
-  protected static final String SIMPLE_UI_PROCESS_PATH = "formeditor-demos/19B022DBC722DBD9/start.ivp";
+  protected static final String SIMPLE_UI_PROCESS_PATH = "formeditor-demos/19AC34C9316CD627/start.ivp";
   protected static final int DEFAULT_TIMEOUT_DURATION = 2;
   protected static final String LOGIN_URL = "formeditor-demos-test/19AD8A34AE465F0C/login.ivp?username=%s&password=%s";
   protected static final String DEVELOPER_USER = "Developer";

@@ -129,6 +129,7 @@
             "cid" : "button16",
             "type" : "Button",
             "config" : {
+              "id" : "submit-button",
               "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Submit')}",
               "action" : "#{logic.close}",
               "type" : "SUBMIT",
@@ -157,6 +158,7 @@
             "cid" : "button13",
             "type" : "Button",
             "config" : {
+              "id" : "approve-button",
               "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Approve')}",
               "action" : "#{logic.close}",
               "type" : "SUBMIT",
