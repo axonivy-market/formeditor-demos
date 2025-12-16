@@ -30,3 +30,20 @@ Dialogs:
             SimpleUIDemo: Simple UI demo
             SimpleUIDescription: This is a simple UI demonstrating the Form Editor feature of Axon Ivy Designer
             Submit: Submit
+          TableUI:
+            Actions: Actions
+            Amount: Amount
+            Approve: Approve
+            Cancel: Cancel
+            Category: Category
+            Date: Date
+            Description: Description
+            Proceed: Proceed
+            Save: Save
+            TotalAmount: 'Total amount:'
+            TravelExpenses: Travel Expenses
+Processes:
+  DynamicUIDemo:
+    name: Dynamic UI Demo
+  TableUIDemo:
+    name: Table UI Demo

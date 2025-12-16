@@ -1,0 +1,219 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
+  "id" : "64ccd49c-c05d-4aea-9358-c0c7e9d4ecb5",
+  "components" : [ {
+    "cid" : "fieldset4",
+    "type" : "Fieldset",
+    "config" : {
+      "components" : [ {
+        "cid" : "datatable5",
+        "type" : "DataTable",
+        "config" : {
+          "id" : "travel-expenses-data",
+          "disabled" : "#{data.isReadOnly}",
+          "updateOnChange" : true,
+          "components" : [ {
+            "cid" : "datatablecolumn8",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Date')}",
+              "value" : "#{currentRow.date}"
+            }
+          }, {
+            "cid" : "datatablecolumn7",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Category')}",
+              "value" : "#{currentRow.category}"
+            }
+          }, {
+            "cid" : "datatablecolumn6",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Amount')}",
+              "value" : "#{currentRow.amount}"
+            }
+          }, {
+            "cid" : "datatablecolumn9",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Description')}",
+              "value" : "#{currentRow.description}"
+            }
+          }, {
+            "cid" : "datatablecolumn12",
+            "type" : "DataTableColumn",
+            "config" : {
+              "header" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Actions')}",
+              "components" : [ {
+                "cid" : "button13",
+                "type" : "Button",
+                "config" : {
+                  "id" : "edit-button",
+                  "action" : "editRow",
+                  "rounded" : true,
+                  "type" : "EDIT",
+                  "icon" : "pi pi-pencil"
+                }
+              }, {
+                "cid" : "button14",
+                "type" : "Button",
+                "config" : {
+                  "id" : "remove-button",
+                  "action" : "deleteRow",
+                  "variant" : "DANGER",
+                  "rounded" : true,
+                  "type" : "DELETE",
+                  "icon" : "pi pi-trash",
+                  "confirmDialog" : true,
+                  "confirmHeader" : "Delete Confirmation",
+                  "confirmMessage" : "Are you sure you want to delete row: #{currentRow.category}?",
+                  "confirmOkValue" : "Yes",
+                  "confirmCancelValue" : "No"
+                }
+              } ],
+              "asActionColumn" : true
+            }
+          } ],
+          "value" : "#{data.data}",
+          "maxRows" : "10",
+          "isEditable" : true,
+          "editDialogId" : "dialog10",
+          "addButton" : true
+        }
+      }, {
+        "cid" : "layout20",
+        "type" : "Layout",
+        "config" : {
+          "components" : [ {
+            "cid" : "text19",
+            "type" : "Text",
+            "config" : {
+              "id" : "total-amount-text",
+              "content" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/TotalAmount')} #{data.data.size()}"
+            }
+          } ]
+        }
+      } ],
+      "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/TravelExpenses')}"
+    }
+  }, {
+    "cid" : "layout1",
+    "type" : "Layout",
+    "config" : {
+      "components" : [ {
+        "cid" : "button2",
+        "type" : "Button",
+        "config" : {
+          "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Cancel')}",
+          "action" : "#{ivyWorkflowView.cancel()}",
+          "variant" : "SECONDARY",
+          "style" : "FLAT",
+          "rounded" : true,
+          "processOnlySelf" : true
+        }
+      }, {
+        "cid" : "button21",
+        "type" : "Button",
+        "config" : {
+          "visible" : "#{data.isReadOnly}",
+          "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Approve')}",
+          "action" : "#{logic.close}",
+          "rounded" : true,
+          "icon" : "si si-check-1"
+        }
+      }, {
+        "cid" : "button3",
+        "type" : "Button",
+        "config" : {
+          "visible" : "#{!data.isReadOnly}",
+          "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Proceed')}",
+          "action" : "#{logic.close}",
+          "rounded" : true,
+          "type" : "SUBMIT",
+          "icon" : "si si-check-1"
+        }
+      } ],
+      "type" : "FLEX",
+      "justifyContent" : "END"
+    }
+  }, {
+    "cid" : "dialog10",
+    "type" : "Dialog",
+    "config" : {
+      "id" : "update-form",
+      "components" : [ {
+        "cid" : "datepicker15",
+        "type" : "DatePicker",
+        "config" : {
+          "id" : "date-picker",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Date')}",
+          "value" : "#{currentRow.date}"
+        }
+      }, {
+        "cid" : "select16",
+        "type" : "Select",
+        "config" : {
+          "id" : "category-select",
+          "staticItems" : [ {
+            "label" : "Hotel",
+            "value" : "hotel"
+          }, {
+            "label" : "Meal",
+            "value" : "meal"
+          }, {
+            "label" : "Taxi",
+            "value" : "taxi"
+          }, {
+            "label" : "Other",
+            "value" : "other"
+          } ],
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Category')}",
+          "value" : "#{currentRow.category}"
+        }
+      }, {
+        "cid" : "input17",
+        "type" : "Input",
+        "config" : {
+          "id" : "amount-input",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Amount')}",
+          "value" : "#{currentRow.amount}",
+          "type" : "NUMBER",
+          "validationMessage" : "Invalid E-Mail"
+        }
+      }, {
+        "cid" : "textarea18",
+        "type" : "Textarea",
+        "config" : {
+          "id" : "description-input",
+          "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Description')}",
+          "value" : "#{currentRow.description}",
+          "rows" : "5"
+        }
+      } ],
+      "header" : "Update form",
+      "linkedComponent" : "datatable5",
+      "buttons" : [ {
+        "cid" : "button10",
+        "type" : "Button",
+        "config" : {
+          "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Cancel')}",
+          "action" : "cancelEdit",
+          "variant" : "SECONDARY",
+          "style" : "FLAT",
+          "type" : "DIALOGCANCEL"
+        }
+      }, {
+        "cid" : "button11",
+        "type" : "Button",
+        "config" : {
+          "id" : "save-button",
+          "name" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/TableUI/Save')}",
+          "action" : "saveEdit",
+          "type" : "DIALOGSAVE",
+          "icon" : "si si-check-1"
+        }
+      } ]
+    }
+  } ]
+}

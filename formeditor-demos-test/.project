@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<<< HEAD:formeditor-demos-test/.project
 	<name>formeditor-demos-test</name>
+========
+	<name>formeditor-demos</name>
+>>>>>>>> master:formeditor-demos/.project
 	<comment></comment>
 	<projects>
 	</projects>

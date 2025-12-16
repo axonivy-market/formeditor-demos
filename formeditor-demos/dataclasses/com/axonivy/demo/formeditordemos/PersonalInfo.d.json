@@ -1,7 +1,12 @@
 {
   "$schema" : "https://json-schema.axonivy.com/data-class/13.1.0/data-class.json",
+<<<<<<<< HEAD:formeditor-demos/dataclasses/com/axonivy/demo/formeditordemos/PersonalInfo.d.json
   "simpleName" : "PersonalInfo",
   "namespace" : "com.axonivy.demo.formeditordemos",
+========
+  "simpleName" : "SimpleUIData",
+  "namespace" : "com.axonivy.demo.formeditordemos.SimpleUI",
+>>>>>>>> master:formeditor-demos/src_hd/com/axonivy/demo/formeditordemos/SimpleUI/SimpleUIData.d.json
   "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "firstName",

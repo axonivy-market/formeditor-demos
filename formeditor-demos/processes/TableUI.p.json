@@ -1,0 +1,74 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/process/13.2.0/process.json",
+  "id" : "19B077AD2CF11562",
+  "config" : {
+    "data" : "com.axonivy.demo.formeditordemos.TableUIData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "start",
+      "config" : {
+        "signature" : "start",
+        "input" : {
+          "params" : [
+            { "name" : "travelDataList", "type" : "List<com.axonivy.demo.formeditordemos.TravelData>", "desc" : "" },
+            { "name" : "isReadOnly", "type" : "Boolean", "desc" : "" }
+          ],
+          "map" : { }
+        },
+        "request" : {
+          "name" : "<%=ivy.cms.co(\"/Processes/TableUIDemo/name\")%>"
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f2", "to" : "f3" }
+      ]
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 592, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "Table UI Dialog",
+      "config" : {
+        "dialog" : "com.axonivy.demo.formeditordemos.TableUI:start(List<com.axonivy.demo.formeditordemos.TravelData>,Boolean)",
+        "call" : {
+          "map" : {
+            "param.travelDataList" : "in.data"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 256, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f4", "to" : "f5", "color" : "default" }
+      ]
+    }, {
+      "id" : "f5",
+      "type" : "DialogCall",
+      "name" : "Table UI Dialog Readonly",
+      "config" : {
+        "dialog" : "com.axonivy.demo.formeditordemos.TableUI:start(List<com.axonivy.demo.formeditordemos.TravelData>,Boolean)",
+        "call" : {
+          "map" : {
+            "param.travelDataList" : "in.data",
+            "param.isReadOnly" : "true"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 448, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f6", "to" : "f1", "color" : "default" }
+      ]
+    } ]
+}
