@@ -19,8 +19,7 @@
               "required" : "#{true}",
               "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
               "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/FirstName')}",
-              "value" : "#{data.personalInfoData.firstName}",
-              "validationMessage" : "Invalid E-Mail"
+              "value" : "#{data.personalInfoData.firstName}"
             }
           }, {
             "cid" : "input5",
@@ -31,8 +30,7 @@
               "required" : "#{true}",
               "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
               "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/LastName')}",
-              "value" : "#{data.personalInfoData.lastName}",
-              "validationMessage" : "Invalid E-Mail"
+              "value" : "#{data.personalInfoData.lastName}"
             }
           }, {
             "cid" : "input6",
@@ -55,8 +53,7 @@
               "requiredMessage" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/RequiredField')}",
               "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Age')}",
               "value" : "#{data.personalInfoData.age}",
-              "type" : "NUMBER",
-              "validationMessage" : "Invalid E-Mail"
+              "type" : "NUMBER"
             }
           }, {
             "cid" : "datepicker7",
