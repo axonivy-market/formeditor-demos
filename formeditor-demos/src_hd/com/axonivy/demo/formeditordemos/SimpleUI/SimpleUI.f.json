@@ -68,20 +68,17 @@
               "id" : "country",
               "disabled" : "#{data.isReadOnly eq 'true'}",
               "staticItems" : [ {
-                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/SelectACountry')}",
-                "value" : ""
+                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Austria')}",
+                "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Austria')}"
               }, {
-                "label" : "Germany",
-                "value" : "Germany"
+                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Germany')}",
+                "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Germany')}"
               }, {
-                "label" : "Switzerland",
-                "value" : "Switzerland"
+                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Switzerland')}",
+                "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Switzerland')}"
               }, {
-                "label" : "Austria",
-                "value" : "Austria"
-              }, {
-                "label" : "Vietnam",
-                "value" : "Vietnam"
+                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Vietnam')}",
+                "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Vietnam')}"
               } ],
               "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Country')}",
               "value" : "#{data.personalInfo.country}"
