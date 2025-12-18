@@ -1,0 +1,69 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "id" : "19B0260A905594CF",
+  "config" : {
+    "data" : "com.axonivy.demo.formeditordemos.SimpleUIData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "start",
+      "config" : {
+        "signature" : "start",
+        "request" : {
+          "name" : "<%=ivy.cms.co(\"/Processes/SimpleUIDemo/name\")%>"
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f2", "to" : "f3" }
+      ]
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 568, "y" : 64 },
+        "labelOffset" : { "x" : 13, "y" : 33 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "Simple UI demo",
+      "config" : {
+        "dialog" : "com.axonivy.demo.formeditordemos.SimpleUI:start(Boolean,com.axonivy.demo.formeditordemos.PersonalInfo)",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.personalInfo" : "result.personalInfo"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 232, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f4", "to" : "f5", "color" : "default" }
+      ]
+    }, {
+      "id" : "f5",
+      "type" : "DialogCall",
+      "name" : "Read only simple UI",
+      "config" : {
+        "dialog" : "com.axonivy.demo.formeditordemos.SimpleUI:start(Boolean,com.axonivy.demo.formeditordemos.PersonalInfo)",
+        "call" : {
+          "map" : {
+            "param.isReadOnly" : "true",
+            "param.personalInfo" : "in.personalInfo"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 416, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f6", "to" : "f1", "color" : "default" }
+      ]
+    } ]
+}
