@@ -32,3 +32,6 @@ Dialogs:
             Switzerland: Switzerland
             TermsAccepted: I accept the terms
             Vietnam: Vietnam
+Processes:
+  DynamicUIDemo:
+    name: Dynamic UI Demo
