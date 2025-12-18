@@ -35,3 +35,5 @@ Dialogs:
 Processes:
   DynamicUIDemo:
     name: Dynamic UI Demo
+  SimpleUIDemo:
+    name: Simple UI Demo
