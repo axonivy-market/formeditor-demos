@@ -1,6 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
-  "id" : "20b77810-719a-4e71-9c1b-6c562b2f3d66",
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.3/form.json",
   "components" : [ {
     "cid" : "fieldset1",
     "type" : "Fieldset",
@@ -77,8 +76,8 @@
                 "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Germany')}",
                 "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Germany')}"
               }, {
-                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Germany')}",
-                "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Germany')}"
+                "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Switzerland')}",
+                "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Switzerland')}"
               }, {
                 "label" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Vietnam')}",
                 "value" : "#{ivy.cms.co('/Dialogs/com/axonivy/demo/formeditordemos/SimpleUI/Vietnam')}"

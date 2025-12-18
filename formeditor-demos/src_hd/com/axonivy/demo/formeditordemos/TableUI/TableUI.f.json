@@ -1,6 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/form/13.2.2/form.json",
-  "id" : "64ccd49c-c05d-4aea-9358-c0c7e9d4ecb5",
+  "$schema" : "https://json-schema.axonivy.com/form/13.2.3/form.json",
   "components" : [ {
     "cid" : "fieldset4",
     "type" : "Fieldset",
