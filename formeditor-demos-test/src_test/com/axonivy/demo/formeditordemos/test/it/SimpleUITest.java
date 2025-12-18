@@ -3,6 +3,9 @@ package com.axonivy.demo.formeditordemos.test.it;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.axonivy.ivy.webtest.IvyWebTest;
+
+@IvyWebTest
 public class SimpleUITest extends WebBaseSetup {
 	private static final String COUNTRY_DROPDOWN_CSS_SELECTOR = "#form\\:country";
 	private static final String FIRSTNAME_INPUT_CSS_SELECTOR = "#form\\:first-name";
@@ -23,7 +26,7 @@ public class SimpleUITest extends WebBaseSetup {
 	}
 
 	@Test
-	void simpleUIShowsCountriesDroppdownWhenClick() {
+	void simpleUIShowsCountriesDropdownWhenClick() {
 		verifyAndClickItemLabelInDropdown(COUNTRY_DROPDOWN_CSS_SELECTOR, "Germany", DROPDOWN_LIST_SUFFIX,
 				DROPDOWN_LABEL_SUFFIX);
 	}
