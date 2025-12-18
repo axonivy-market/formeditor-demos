@@ -5,17 +5,13 @@
   <parent>
     <groupId>com.axonivy.ivy.api</groupId>
     <artifactId>ivy-project-parent</artifactId>
-    <version>13.2.0-SNAPSHOT</version>
+    <version>13.2.0</version>
     <relativePath></relativePath>
   </parent>
   <groupId>com.axonivy.demo.formeditordemos</groupId>
   <artifactId>formeditor-demos-test</artifactId>
   <version>13.2.0-SNAPSHOT</version>
   <packaging>iar-integration-test</packaging>
-  <properties>
-    <tester.version>13.1.1</tester.version>
-    <project.build.plugin.version>13.1.1</project.build.plugin.version>
-  </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>

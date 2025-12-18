@@ -13,6 +13,25 @@ Dialogs:
             FirstName: First Name
             LastName: Last Name
             Submit: Submit
+          SimpleUI:
+            AboutMe: About Me
+            Age: Age
+            Approve: Approve
+            Austria: Austria
+            Cancel: Cancel
+            Country: Country
+            DateOfBirth: Date of Birth
+            Email: E-mail
+            FirstName: First Name
+            Germany: Germany
+            InvalidEmail: Invalid E-mail
+            LastName: Last Name
+            PersonalInfo: Personal Info
+            RequiredField: This field is required
+            Submit: Submit
+            Switzerland: Switzerland
+            TermsAccepted: I accept the terms
+            Vietnam: Vietnam
           TableUI:
             Actions: Actions
             Amount: Amount
@@ -28,5 +47,7 @@ Dialogs:
 Processes:
   DynamicUIDemo:
     name: Dynamic UI Demo
+  SimpleUIDemo:
+    name: Simple UI Demo
   TableUIDemo:
     name: Table UI Demo

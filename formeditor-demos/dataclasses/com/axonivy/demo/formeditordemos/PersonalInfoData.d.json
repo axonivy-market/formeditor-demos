@@ -1,0 +1,32 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/13.2.0/data-class.json",
+  "simpleName" : "PersonalInfoData",
+  "namespace" : "com.axonivy.demo.formeditordemos",
+  "fields" : [ {
+    "name" : "firstName",
+    "modifiers" : [ ]
+  }, {
+    "name" : "lastName",
+    "modifiers" : [ ]
+  }, {
+    "name" : "email",
+    "modifiers" : [ ]
+  }, {
+    "name" : "age",
+    "type" : "Number",
+    "modifiers" : [ ]
+  }, {
+    "name" : "dateOfBirth",
+    "type" : "Date",
+    "modifiers" : [ ]
+  }, {
+    "name" : "aboutMe",
+    "modifiers" : [ ]
+  }, {
+    "name" : "termsAccepted",
+    "type" : "Boolean",
+    "modifiers" : [ ]
+  }, {
+    "name" : "country"
+  } ]
+}
