@@ -8,10 +8,10 @@ This demo project shows how forms can be created and used within a process. It g
 Ready to build a form? These short videos walk you through the entire process from dragging your first element onto the canvas to connecting it with real data. No coding required. Just watch, learn, and start creating your own form in Axon Ivy Neo Designer.
 
 ### Simple UI Demo
-[![Simple UI Demo](https://media.supademo.com/cm9v3asdm02y4yt0i3v110l44/vjeptStY9sVV74OsGNNo_.jpg)](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s?utm_source=link)
+[![Simple UI Demo](https://media.supademo.com/cm9v3asdm02y4yt0i3v110l44/vjeptStY9sVV74OsGNNo_.jpg)](https://app.supademo.com/embed/cmjcix7zw0016wh0irwpr3p0s?embed_v=2)
 
 ### Dynamic UI Demo
-[![Dynamic UI Demo](https://media.supademo.com/cm9v3asdm02y4yt0i3v110l44/x81xkxU2ptv5cdN1ndG7j.jpg)](https://app.supademo.com/demo/cmjb7s95v0054wz0ib8sahygj?utm_source=link)
+[![Dynamic UI Demo](https://media.supademo.com/cm9v3asdm02y4yt0i3v110l44/x81xkxU2ptv5cdN1ndG7j.jpg)](https://app.supademo.com/embed/cmjb7s95v0054wz0ib8sahygj?embed_v=2)
 
 ### Table UI Demo
-[![Table UI Demo](https://media.supademo.com/cm9v3asdm02y4yt0i3v110l44/3NX3lTdMg2GMHNmQJDICq.jpg)](https://app.supademo.com/demo/cmjbhfvry0001zf0hermiv6a6?utm_source=link)
+[![Table UI Demo](https://media.supademo.com/cm9v3asdm02y4yt0i3v110l44/3NX3lTdMg2GMHNmQJDICq.jpg)](https://app.supademo.com/embed/cmjbhfvry0001zf0hermiv6a6?embed_v=2)
