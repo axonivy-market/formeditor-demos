@@ -64,11 +64,11 @@ The first screen contains mandatory text fields for First Name and Last Name, an
 
 After modelling the entire form 2 very important buttons must be added: proceed and cancel. Click the database symbol at the bottom of the UI
 
-<img width="1023" alt="image" src="https://github.com/user-attachments/assets/a7ecc29a-3098-4533-b070-6070bdca10da" />
+<img width="823" alt="image" src="https://github.com/user-attachments/assets/a7ecc29a-3098-4533-b070-6070bdca10da" />
 
 and create them by activating the checkbox:
 
-<img width="640" alt="image" src="https://github.com/user-attachments/assets/eac618e4-e161-4097-8684-dca831a7667e" />
+<img width="440" alt="image" src="https://github.com/user-attachments/assets/eac618e4-e161-4097-8684-dca831a7667e" />
 
 For these fields now the visibility is controlled:
 
@@ -84,9 +84,7 @@ Some magic data mapping must happen now in our logic of the UI element:
 
 <img width="1280"  alt="image" src="https://github.com/user-attachments/assets/beb177ed-135c-4c48-afa7-feb07860b675" />
 
-For using the UI we have to integrate it into a process and map the data accordingly:
-
-We create another data class:
+For using the UI we have to integrate it into a process and map the data accordingly, so we create another data class:
 
 <img width="458" alt="image" src="https://github.com/user-attachments/assets/52f81970-11bf-4eeb-9d67-5b9678d097e3" />
 
@@ -154,7 +152,7 @@ Let’s take a closer look at the data structure, as it is a bit tricky. We defi
 
 We define a list of this data class : 
 
-<img width="529"  alt="image" src="https://github.com/user-attachments/assets/aedcff3c-e30b-42b8-8976-e1c890a4aaac" />
+<img width="429"  alt="image" src="https://github.com/user-attachments/assets/aedcff3c-e30b-42b8-8976-e1c890a4aaac" />
 
 <img width="1024"  alt="image" src="https://github.com/user-attachments/assets/7756f558-04ee-453c-991d-cc9681f15767" />
 
