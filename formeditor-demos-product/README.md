@@ -122,9 +122,41 @@ The only “magic” in this example is enabling “Update form on Change” for
 
  ... making the visibility of the Federal State select menu dependent on country eq Germany by configuring the visibility field:
 
- 
+ <img width="456"  alt="image" src="https://github.com/user-attachments/assets/671d3c1f-958a-4c5e-ae1f-a832198b9bb8" />
+
+<img width="1447" alt="image" src="https://github.com/user-attachments/assets/acbe2d95-6726-4869-af65-c071e7d7a1c3" />
 
 
 
 ### Table UI Demo
-[![Table UI Demo](images/table-ui.png)](https://app.supademo.com/embed/cmjbhfvry0001zf0hermiv6a6?embed_v=2)
+
+In this example, we show how to configure a dynamic table in the UI, i.e. a table that allows rows to be created at runtime and supports calculations based on the table content.
+
+For a detailed video instruction check [this](https://app.supademo.com/demo/cmjbhfvry0001zf0hermiv6a6?utm_source=link)
+
+UI for a table row:
+
+<img width="823"  alt="image" src="https://github.com/user-attachments/assets/bd5a002d-42f4-4f12-9fb2-8c6b221a9f32" />
+
+And how it will look like in the table:
+
+<img width="1024" alt="image" src="https://github.com/user-attachments/assets/dc25762e-b2de-473d-a20e-2e0cfe79f4bf" />
+
+The use case for our example is a travel expense form.
+
+Let’s take a closer look at the data structure, as it is a bit tricky. We define a new data class with one attribute per table column.
+
+<img width="1024" alt="image" src="https://github.com/user-attachments/assets/e33b8240-830b-4534-b0ff-f9bcd57ff3b9" />
+
+We define a list of this data class : 
+
+<img width="529"  alt="image" src="https://github.com/user-attachments/assets/aedcff3c-e30b-42b8-8976-e1c890a4aaac" />
+
+<img width="1024"  alt="image" src="https://github.com/user-attachments/assets/7756f558-04ee-453c-991d-cc9681f15767" />
+
+… and add this list as data source to our table:
+
+<img width="1024"  alt="image" src="https://github.com/user-attachments/assets/1d0ec02a-c69e-4fef-a673-d12e6152a449" />
+
+
+
