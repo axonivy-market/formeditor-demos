@@ -98,6 +98,10 @@ Our process contains 2 User Dialoges - for the ReadOnly version “isReadOnly”
 
 
 
+
+
+
+
 ### Dynamic UI Demo
 
 A dynamic UI is a user interface that changes its structure, content, or behavior at runtime based on user input, data, or context. For Axon Ivy, the key setting for this is Update Form on Change — but let’s go through it step by step. Again, we have prepared a super detailed video for you, check [this](https://app.supademo.com/demo/cmjb7s95v0054wz0ib8sahygj?utm_source=link) - the documentation below is just a summary.
@@ -105,7 +109,11 @@ A dynamic UI is a user interface that changes its structure, content, or behavio
 In this UI, the “Federal State” select menu is only visible when Germany is selected as the country.
 
 
-
+| First UI | Second UI | 
+|----------|----------|
+|<img height="300" alt="image" src="https://github.com/user-attachments/assets/cd8694bd-2f50-4baf-8a6c-afe2257048e4" />| <img  height="300" alt="image" src="https://github.com/user-attachments/assets/9517f9f3-83af-463e-b520-5bfef4167b75" />
+|
+|  | Content is copied from First UI and read-only |
 
 
 
