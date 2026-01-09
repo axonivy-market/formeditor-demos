@@ -10,12 +10,17 @@ This demo project shows how forms can be created and used within a process. It p
 - how to set some fields to read-only
 - how to influence the visibility of fields
 
-[Video Tutorial Simple UI](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s?utm_source=link)
+[Video Tutorial Simple UI](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s)
 
 
 **Dynamic UI Demo:** A dynamic UI is a user interface that changes its structure, content, or behavior at runtime based on user input, data, or context. For Axon Ivy, the key setting for this is Update Form on Change — but let’s go through it step by step.
 
+[Video Tutorial Dynamic UI](https://app.supademo.com/demo/cmjb7s95v0054wz0ib8sahygj)
+
 **Table UI Demo:** In this example, we show how to configure a dynamic table in the UI, i.e. a table that allows rows to be created at runtime and supports calculations based on the table content.
+
+[Video Tutorial Table UI](https://app.supademo.com/demo/cmjbhfvry0001zf0hermiv6a6)
+
 
 ## Demo
 
@@ -33,7 +38,7 @@ This demo is a simple UI with static elements to demonstrate not only the core f
 |  ||
 
 
-The documentation below is not a step-by-step guide. For that, you can check out our  [video tutorial](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s?utm_source=link)
+The documentation below is not a step-by-step guide. For that, you can check out our  [video tutorial](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s)
 
 We create a Dialog and a Data Class: 
 
@@ -111,8 +116,7 @@ In this UI, the “Federal State” select menu is only visible when Germany is 
 
 | `country != Germany` | `country == Germany`| 
 |----------|----------|
-|<img height="300" alt="image" src="https://github.com/user-attachments/assets/cd8694bd-2f50-4baf-8a6c-afe2257048e4" />| <img  height="300" alt="image" src="https://github.com/user-attachments/assets/9517f9f3-83af-463e-b520-5bfef4167b75" />
-|
+|<img height="300" alt="image" src="https://github.com/user-attachments/assets/cd8694bd-2f50-4baf-8a6c-afe2257048e4" />| <img  height="300" alt="image" src="https://github.com/user-attachments/assets/9517f9f3-83af-463e-b520-5bfef4167b75" />|
 |  | Federal states are shown only if Germany is selected as the country. |
 
 
@@ -132,7 +136,7 @@ The only “magic” in this example is enabling “Update form on Change” for
 
 In this example, we show how to configure a dynamic table in the UI, i.e. a table that allows rows to be created at runtime and supports calculations based on the table content.
 
-For a detailed video instruction check [this](https://app.supademo.com/demo/cmjbhfvry0001zf0hermiv6a6?utm_source=link)
+For a detailed video instruction check [this](https://app.supademo.com/demo/cmjbhfvry0001zf0hermiv6a6)
 
 UI for a table row:
 
