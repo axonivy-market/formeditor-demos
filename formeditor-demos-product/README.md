@@ -54,11 +54,11 @@ Now we can start to visually create our form - do not forget to save your data, 
 
 We add a condition to the Disable field so we can set our Input fields to read-only: (need that later, just keep it in mind for now)
 
-<img width="775" alt="image" src="https://github.com/user-attachments/assets/8d00db14-616d-433d-92a2-c0f270aa3521" />
+<img width="575" alt="image" src="https://github.com/user-attachments/assets/8d00db14-616d-433d-92a2-c0f270aa3521" />
 
 For making fields mandatory use the required field below: 
 
-<img width="349" alt="image" src="https://github.com/user-attachments/assets/979f58b6-1cad-44d0-acef-d40d84b42a7a" />
+<img width="249" alt="image" src="https://github.com/user-attachments/assets/979f58b6-1cad-44d0-acef-d40d84b42a7a" />
 
 The first screen contains mandatory text fields for First Name and Last Name, an email field with validation, a numeric age input, a date picker for date of birth, a country dropdown, a textarea for a short description, a terms acceptance checkbox, and submit and cancel buttons.
 
