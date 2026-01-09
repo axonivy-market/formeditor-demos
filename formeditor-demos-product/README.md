@@ -30,7 +30,7 @@ This demo is a simple UI with static elements to demonstrate not only the core f
 | First UI | Second UI | 
 |----------|----------|
 | <img height="300" alt="image" src="https://github.com/user-attachments/assets/8b860005-6d6d-48e7-b7cd-72248f9a11f2" />  | <img height="300" alt="image" src="https://github.com/user-attachments/assets/8b719acf-1ed6-4fe2-b905-ce714a730e6c" /> |
-|  | Content is copied from First UI and read-only |
+|  ||
 
 
 The documentation below is not a step-by-step guide. For that, you can check out our  [video tutorial](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s?utm_source=link)
@@ -109,14 +109,20 @@ A dynamic UI is a user interface that changes its structure, content, or behavio
 In this UI, the “Federal State” select menu is only visible when Germany is selected as the country.
 
 
-| First UI | Second UI | 
+| `country != Germany` | `country == Germany`| 
 |----------|----------|
 |<img height="300" alt="image" src="https://github.com/user-attachments/assets/cd8694bd-2f50-4baf-8a6c-afe2257048e4" />| <img  height="300" alt="image" src="https://github.com/user-attachments/assets/9517f9f3-83af-463e-b520-5bfef4167b75" />
 |
-|  | Content is copied from First UI and read-only |
+|  | Federal states are shown only if Germany is selected as the country. |
 
 
+The only “magic” in this example is enabling “Update form on Change” for the Country select menu and making the visibility of the Federal State select menu dependent on that field.
 
+<img width="1461"  alt="image" src="https://github.com/user-attachments/assets/cb280b5a-5047-45f9-8753-e49d659066ee" />
+
+ ... making the visibility of the Federal State select menu dependent on country eq Germany by configuring the visibility field:
+
+ 
 
 
 
