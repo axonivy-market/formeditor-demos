@@ -34,7 +34,7 @@ This demo is a simple UI with static elements to demonstrate not only the core f
 
 | First UI | Second UI | 
 |----------|----------|
-| ![First demo UI](images/first-demo-ui.png)  | ![Second demo UI](images/second-demo-ui.png) |
+| <img src="images/first-demo-ui.png" alt="First demo UI" height="300">  | <img src="images/second-demo-ui.png" alt="Second demo UI" height="300"> |
 
 The documentation below is not a step-by-step guide. For that, you can check out our  [video tutorial](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s)
 
@@ -112,7 +112,7 @@ In this UI, the “Federal State” select menu is only visible when Germany is 
 
 | `country != Germany` | `country == Germany`| 
 |----------|----------|
-|![Dynamic UI Layout](images/dynamic-ui-layout.png) | ![Dynamic UI Layout With State](images/dynamic-ui-layout-with-state.png) |
+| <img src="images/dynamic-ui-layout.png" alt="Dynamic UI Layout" height="300"> | <img src="images/dynamic-ui-layout-with-state.png" alt="Dynamic UI Layout With State" height="300"> |
 |  | Federal states are shown only if Germany is selected as the country. |
 
 
