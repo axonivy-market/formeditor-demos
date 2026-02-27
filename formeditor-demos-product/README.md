@@ -4,6 +4,8 @@ The Axon Ivy Form Editor is an easy-to-use design tool that lets you create form
 
 This demo project shows how forms can be created and used within a process. It provides three simple and practical examples to help users understand how to design a form, connect it to data, and interact with it step by step—even without deep technical knowledge. For better understanding, each demo is accompanied by a short video walkthrough.
 
+**The tutorials were created for our PRO Designer—only for the second example (Dynamic UI) do we also have a tutorial for our NEO Designer.**
+
 **Simple UI Demo:**  This demo is a simple UI with static elements to demonstrate not only the core features of the Form Editor. As use case, we have implemented an onboarding UI. In addition, we will show you
 - how field input can be validated
 - how data is transferred from one UI to the next
@@ -15,7 +17,11 @@ This demo project shows how forms can be created and used within a process. It p
 
 **Dynamic UI Demo:** A dynamic UI is a user interface that changes its structure, content, or behavior at runtime based on user input, data, or context. For Axon Ivy, the key setting for this is Update Form on Change — but let’s go through it step by step.
 
-[Video Tutorial Dynamic UI](https://app.supademo.com/demo/cmjb7s95v0054wz0ib8sahygj)
+[Video Tutorial Dynamic UI](https://app.supademo.com/demo/cmjb7s95v0054wz0ib8sahygj)  
+[Video Tutorial Dynamic UI for NEO Designer](https://app.supademo.com/demo/cmltielbq014b010ik9j66sg1)
+
+
+
 
 **Table UI Demo:** In this example, we show how to configure a dynamic table in the UI, i.e. a table that allows rows to be created at runtime and supports calculations based on the table content.
 
