@@ -9,7 +9,7 @@
   </parent>
   <groupId>com.axonivy.demo.formeditordemos</groupId>
   <artifactId>formeditor-demos-test</artifactId>
-  <version>13.2.1</version>
+  <version>13.2.2-SNAPSHOT</version>
   <packaging>iar-integration-test</packaging>
   <dependencyManagement>
     <dependencies>
