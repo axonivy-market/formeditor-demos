@@ -40,7 +40,7 @@ This demo is a simple UI with static elements to demonstrate not only the core f
 
 | First UI | Second UI | 
 |----------|----------|
-| <img src="images/first-demo-ui.png" alt="First demo UI" height="300">  | <img src="images/second-demo-ui.png" alt="Second demo UI" height="300"> |
+| ![First demo UI](images/first-demo-ui.png)  | ![Second demo UI](images/second-demo-ui.png) |
 
 The documentation below is not a step-by-step guide. For that, you can check out our  [video tutorial](https://app.supademo.com/demo/cmjcix7zw0016wh0irwpr3p0s)
 
