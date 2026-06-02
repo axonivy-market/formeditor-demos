@@ -1,47 +1,46 @@
 # Axon Ivy Form Editor Demos
 
-Demo-Projekt für den Axon Ivy Form Editor
-
-Lies unsere [Dokumentation](formeditor-demos-product/README.md).
+Dieses Demo-Projekt zeigt dir, wie du mit dem Axon Ivy Form Editor formularbasierte Benutzererlebnisse aufbaust und testest. Es liefert dir drei sofort nutzbare Beispiele für die Erfassung persönlicher Daten, die Prüfung persönlicher Informationen und den Umgang mit Reisekosten, damit du dynamische Felder, Validierung, schreibgeschützte Zustände und Tabellenbearbeitung an einem Ort ausprobieren kannst.
 
 **Wichtigste Funktionen**
 
-- Erkunde interaktive Formular‑UIs (Dynamic, Simple, Table), um Benutzer‑Eingabe‑Flows schnell zu prototypisieren.
-- Verwende vorgefertigte Dialogkomponenten und Dataklassen, um Entwicklungszeit für Formulare zu reduzieren.
-- Führe Demo‑Prozesse aus, um Ende‑zu‑Ende‑Workflows und Integrationspunkte zu validieren.
-- Verwalte tabellarische Daten mit Table‑UIs, die Validierung und Summen unterstützen.
-- Lokalisier Beschriftungen und Dialoge über CMS‑Dateien für schnelle Mehrsprachen‑Unterstützung.
-- Passe Demos an oder erweitere sie, um sie an deine Prozesse anzupassen und die Produktion zu beschleunigen.
+- Prototypische responsive Formulare mit dynamischen Feldern erstellen, die auf das ausgewählte Land reagieren.
+- Umfangreichere persönliche Profile mit Validierung, Pflichtfeldern und bearbeitbaren oder schreibgeschützten Modi erfassen.
+- Reisekosten in einer bearbeitbaren Tabelle mit Hinzufügen, Bearbeiten, Löschen und Summenanzeige verwalten.
+- Formulardatenklassen wiederverwenden, damit Dialogdaten klar von der Prozesslogik getrennt bleiben.
+- Demo-Prozesse Ende zu Ende ausführen, um zu sehen, wie Request Starts, Dialoge und Ergebnisse zusammenhängen.
+- Beschriftungen und Prozessnamen über CMS-Einträge lokalisieren, damit das Benutzererlebnis konsistent bleibt.
 
 ## Demo
 
-Schau dir die bereitgestellten Demo‑Implementierungen für Dynamic UI, Simple UI und Table UI an. Unten findest du schrittweise Anleitungen zu den Demo‑Abläufen.
+Erkunde die drei Demo-Implementierungen, um zu sehen, wie der Axon Ivy Form Editor mit unterschiedlichen Formularstilen umgeht. Die Workflows unten zeigen dir Schritt für Schritt, was du tust und was du als Nächstes siehst.
 
-### Demo‑Workflows
+### Demo-Workflows
 
 #### Form Editor Demos (formeditor-demos)
 
 ##### Dynamic UI Demo
-1. Starte die Dynamic UI Demo über das Demo‑Menü.
-2. Fülle die persönlichen Daten aus (firstName, lastName, email, dateOfBirth).
-3. Sende das Formular ab, um die Verarbeitung zu sehen und das Ergebnis zu prüfen.
+1. Starte die Dynamic UI Demo über das Demo-Menü.
+2. Gib deine persönlichen Daten ein und wähle ein Land aus.
+3. Wenn du Deutschland auswählst, wird das Feld für das Bundesland sichtbar, damit du die Adressangaben vervollständigen kannst.
+4. Sende den Dialog ab, um die gespeicherten Daten zu prüfen, und fahre mit dem schreibgeschützten Dialog fort.
 
 ##### Simple UI Demo
-1. Starte die Simple UI Demo über das Demo‑Menü.
-2. Fülle die persönlichen Felder aus und akzeptiere gegebenenfalls die Bedingungen.
-3. Sende das Formular ab, um die Daten zu speichern und eine Bestätigung zu sehen.
+1. Starte die Simple UI Demo über das Demo-Menü.
+2. Fülle die Felder für persönliche Informationen aus, einschließlich Kontaktdaten, Alter und kurzer Selbstbeschreibung.
+3. Akzeptiere die Bedingungen, wenn es erforderlich ist, und sende das Formular ab.
+4. Prüfe die Daten anschließend noch einmal im schreibgeschützten Dialog und bestätige das Ergebnis.
 
 ##### Table UI Demo
-1. Starte die Table UI Demo über das Demo‑Menü.
-2. Erfasse Reisekosten‑Einträge oder importiere sie in die Tabelle.
-3. Prüfe die Summen und fahre mit Freigabe oder Export fort.
+1. Starte die Table UI Demo über das Demo-Menü.
+2. Füge Reisekostenzeilen in der Tabelle hinzu oder bearbeite sie.
+3. Prüfe die laufende Gesamtsumme und passe die Zeilen an, bis die Liste passt.
+4. Wechsle in die schreibgeschützte Ansicht, um das finale Ergebnis vor dem Abschluss zu prüfen.
 
 ## Einrichtung
 
 - **Rollen:** Everybody (in config/roles.xml konfiguriert)
 - **OpenAPI:** Für diesen Abschnitt wurden keine Informationen bereitgestellt.
-
-- Für diesen Abschnitt wurden keine Informationen bereitgestellt.
 
 ### Variablen
 
@@ -57,36 +56,34 @@ Schau dir die bereitgestellten Demo‑Implementierungen für Dynamic UI, Simple 
 
 ### Dialogkomponenten
 
-#### DynamicUI — Erfasse und bearbeite persönliche Daten mit dynamischen Feldern
+#### DynamicUI — Persönliche Details mit dynamischen Feldern erfassen und bearbeiten
 - **Namespace:** com.axonivy.demo.formeditordemos.DynamicUI
-- **Komponententyp:** HTML Dialog
+- **Komponententyp:** Formular-Dialog
 - **Felder:**
-   - `data` (com.axonivy.demo.formeditordemos.PersonalData) — enthält persönliche Felder wie firstName, lastName, email, dateOfBirth, country
-   - `isReadOnly` (Boolean) — ob der Dialog schreibgeschützt ist
-- **Verwendet in:** DynamicUI Prozess (Dialoge: Dynamic UI demo, Read only dialog)
-- **Zweck:** Bietet ein interaktives Formular zur Eingabe persönlicher Daten mit bedingten Feldern.
+  - `data` (com.axonivy.demo.formeditordemos.PersonalData) — persönliche Daten wie Vorname, Nachname, E-Mail, Geburtsdatum, Land und Bundesland
+  - `isReadOnly` (Boolean) — steuert, ob der Dialog bearbeitet werden kann
+- **Zweck:** Erfasse persönliche Daten mit länderspezifischen Feldern und einem schreibgeschützten Prüfmodus.
 
-#### SimpleUI — Kompakter Dialog zur Erfassung persönlicher Basisdaten
+#### SimpleUI — Persönliche Informationen mit Validierung erfassen und prüfen
 - **Namespace:** com.axonivy.demo.formeditordemos.SimpleUI
-- **Komponententyp:** HTML Dialog
+- **Komponententyp:** Formular-Dialog
 - **Felder:**
-   - `personalInfoData` (com.axonivy.demo.formeditordemos.PersonalInfoData) — strukturierte persönliche Felder
-   - `isReadOnly` (Boolean) — ob der Dialog schreibgeschützt ist
-- **Verwendet in:** SimpleUI Prozess (Dialoge: Simple UI Demo, Readonly Simple UI)
-- **Zweck:** Erfasst grundlegende persönliche Informationen in einem kompakten Dialog.
+  - `personalInfoData` (com.axonivy.demo.formeditordemos.PersonalInfoData) — persönliche Informationen einschließlich Kontaktdaten, Alter, Geburtsdatum, About Me, Land und Zustimmung
+  - `isReadOnly` (Boolean) — steuert, ob der Dialog bearbeitet oder nur gelesen werden kann
+- **Zweck:** Sammle persönliche Informationen mit Validierung, Pflichtfeldern und getrennten Senden- und Freigabeabläufen.
 
-#### TableUI — Tabellen‑UI zur Verwaltung von Eintragsmengen
+#### TableUI — Reisekosten in einer bearbeitbaren Tabelle verwalten
 - **Namespace:** com.axonivy.demo.formeditordemos.TableUI
-- **Komponententyp:** HTML Dialog / Table UI
+- **Komponententyp:** Formular-Dialog
 - **Felder:**
-   - `data` (List<com.axonivy.demo.formeditordemos.TravelData>) — Liste von Reisekosteneinträgen
-- **Verwendet in:** TableUI Prozess (Dialoge: Table UI Dialog)
-- **Zweck:** Anzeige und Bearbeitung tabellarischer Daten wie Reisekosten mit Summenfunktion.
+  - `data` (List<com.axonivy.demo.formeditordemos.TravelData>) — Reisekostenzeilen mit Datum, Kategorie, Betrag und Beschreibung
+  - `isReadOnly` (Boolean) — steuert, ob die Tabelle bearbeitet werden kann
+- **Zweck:** Bearbeite Reisekosten, prüfe Summen und schließe mit einer Freigabe- oder Weiter-Aktion ab.
 
 ### Webservices
 
 - Für diesen Abschnitt wurden keine Informationen bereitgestellt.
 
-### Maven‑Artefakte
+### Maven-Artefakte
 
 - Für diesen Abschnitt wurden keine Informationen bereitgestellt.
