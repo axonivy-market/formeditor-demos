@@ -3,7 +3,7 @@
   <groupId>com.axonivy.demo.formeditordemos</groupId>
   <name>formeditor-demos</name>
   <artifactId>formeditor-demos-modules</artifactId>
-  <version>13.2.2</version>
+  <version>13.2.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -14,7 +14,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
-    <tag>v13.2.2</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>

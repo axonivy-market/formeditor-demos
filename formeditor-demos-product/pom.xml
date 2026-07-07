@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.demo.formeditordemos</groupId>
   <artifactId>formeditor-demos-product</artifactId>
-  <version>13.2.2</version>
+  <version>13.2.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <properties>
