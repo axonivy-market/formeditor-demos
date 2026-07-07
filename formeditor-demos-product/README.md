@@ -118,7 +118,7 @@ In this UI, the “Federal State” select menu is only visible when Germany is 
 
 | `country != Germany` | `country == Germany`| 
 |----------|----------|
-| <img src="images/dynamic-ui-layout.png" alt="Dynamic UI Layout" height="300"> | <img src="images/dynamic-ui-layout-with-state.png" alt="Dynamic UI Layout With State" height="300"> |
+| ![Dynamic UI Layout](images/dynamic-ui-layout.png) | ![Dynamic UI Layout With State](images/dynamic-ui-layout-with-state.png) |
 |  | Federal states are shown only if Germany is selected as the country. |
 
 
